@@ -1,0 +1,300 @@
+//do jupiter create flow start: url=http://jupiter.domain-center.svc/api/v2/jobflow/create, header=null, request=
+{
+  "flow_id": "074b1f8495424da88b32edce9579e66b",
+  "notify_url": null,
+  "parties": null,
+  "schedule_policy": null,
+  "jobs": [
+    {
+      "job_id": "op-table-statistics-3a774ce1104b42079f59",
+      "dependencies": [
+        "op-psi-v3-f3781b3fc4fd46d090a3cad1dd7094"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_TABLE_STATISTICS",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"fields\":[{\"name\":\"x1\",\"type\":\"double\"},{\"name\":\"x2\",\"type\":\"double\"},{\"name\":\"x3\",\"type\":\"double\"},{\"name\":\"x4\",\"type\":\"double\"},{\"name\":\"x5\",\"type\":\"double\"},{\"name\":\"y\",\"type\":\"double\"},{\"name\":\"x6\",\"type\":\"double\"},{\"name\":\"x7\",\"type\":\"double\"},{\"name\":\"x8\",\"type\":\"double\"},{\"name\":\"x9\",\"type\":\"double\"},{\"name\":\"x10\",\"type\":\"double\"},{\"name\":\"id1\",\"type\":\"string\"}],\"in_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi_table_20230615111400_125\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"fields\":[{\"name\":\"x11\",\"type\":\"double\"},{\"name\":\"x12\",\"type\":\"double\"},{\"name\":\"x13\",\"type\":\"double\"},{\"name\":\"x14\",\"type\":\"double\"},{\"name\":\"x15\",\"type\":\"double\"},{\"name\":\"x16\",\"type\":\"double\"},{\"name\":\"x17\",\"type\":\"double\"},{\"name\":\"x18\",\"type\":\"double\"},{\"name\":\"x19\",\"type\":\"double\"},{\"name\":\"x20\",\"type\":\"double\"},{\"name\":\"id2\",\"type\":\"string\"}],\"in_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/psi_table_20230615111400_125\"}}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_10\",\"job_id\":\"op-table-statistics-a6a0944f78cc484e9284\",\"code_name\":\"OPERATOR_TABLE_STATISTIC\",\"name\":\"全表统计\",\"namespace\":\"Ant\",\"op\":\"OP_TABLE_STATISTICS\",\"dependencies\":[\"ppo3qqkt_node_9\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_9_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_10_output_1\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"fields\":[{\"name\":\"x1\",\"type\":\"double\"},{\"name\":\"x2\",\"type\":\"double\"},{\"name\":\"x3\",\"type\":\"double\"},{\"name\":\"x4\",\"type\":\"double\"},{\"name\":\"x5\",\"type\":\"double\"},{\"name\":\"y\",\"type\":\"double\"},{\"name\":\"x6\",\"type\":\"double\"},{\"name\":\"x7\",\"type\":\"double\"},{\"name\":\"x8\",\"type\":\"double\"},{\"name\":\"x9\",\"type\":\"double\"},{\"name\":\"x10\",\"type\":\"double\"},{\"name\":\"id1\",\"type\":\"string\"}]},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"fields\":[{\"name\":\"x11\",\"type\":\"double\"},{\"name\":\"x12\",\"type\":\"double\"},{\"name\":\"x13\",\"type\":\"double\"},{\"name\":\"x14\",\"type\":\"double\"},{\"name\":\"x15\",\"type\":\"double\"},{\"name\":\"x16\",\"type\":\"double\"},{\"name\":\"x17\",\"type\":\"double\"},{\"name\":\"x18\",\"type\":\"double\"},{\"name\":\"x19\",\"type\":\"double\"},{\"name\":\"x20\",\"type\":\"double\"},{\"name\":\"id2\",\"type\":\"string\"}]}},\"hyper_params\":{},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":-228,\\\"y\\\":-188,\\\"union_type\\\":\\\"axis1\\\",\\\"featureNames\\\":\\\"x1,x2,x3,x4,x5,y,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20,id1,id2\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-stats-pva-v2-7ac97b9a03824a2689217f32",
+      "dependencies": [
+        "op-inference-v2-4eeeb4cb173746eeadb91e3c"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_STATS_PVA_V2",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"binning_method\":\"quantile\",\"label_column_name\":\"y\",\"bad_label_value\":\"0\",\"positive_label\":\"1\",\"in_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/prediction_20230615111400_125\",\"n_divide\":\"10\",\"score_column_name\":\"prediction\"}}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_5\",\"job_id\":\"op-stats-pva-v2-f20e8e92c097440cb80c3b60\",\"code_name\":\"OPERATOR_PVA\",\"name\":\"PVA\",\"namespace\":\"Ant\",\"op\":\"OP_STATS_PVA_V2\",\"dependencies\":[\"ppo3qqkt_node_3\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_3_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_5_output_1\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"binning_method\":\"quantile\",\"label_column_name\":\"y\",\"bad_label_value\":\"0\",\"positive_label\":\"1\",\"n_divide\":\"10\",\"score_column_name\":\"prediction\"}},\"hyper_params\":{},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":12,\\\"y\\\":262,\\\"badLabelValue\\\":\\\"0\\\",\\\"binningMethod\\\":\\\"quantile\\\",\\\"nDivide\\\":\\\"10\\\",\\\"scoreColumnName\\\":\\\"prediction\\\",\\\"positive_label\\\":\\\"1\\\",\\\"labelColumnName\\\":\\\"y\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-stats-pvalue-01fda6fdcfa24ba1a66bb090",
+      "dependencies": [
+        "op-sslr-v4-a259004477e14ca0985e77a51514f",
+        "op-woe-binning-v3-f0b703b47050481f9e4cb3",
+        "op-woe-substitution-13bd591d9b2242329608"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_STATS_PVALUE",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"in_model_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_2_output_1_20230615111400_125\",\"in_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_12_output_1_20230615111400_125\",\"label_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"in_model_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_2_output_1_20230615111400_125\",\"in_data_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_12_output_1_20230615111400_125\"}},\"rt_desc\":{\"beaver_type\":\"tfp\",\"fxp_bits\":24}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_4\",\"job_id\":\"op-stats-pvalue-1fba7aa889bf4ec7b67d47f2\",\"code_name\":\"OPERATOR_P_VALUE\",\"name\":\"P-Value\",\"namespace\":\"Ant\",\"op\":\"OP_STATS_PVALUE\",\"dependencies\":[\"ppo3qqkt_node_2\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_2_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_4_output_1\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"label_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{}},\"hyper_params\":{},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":-108,\\\"y\\\":172}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-stats-ssvif-40010b8362534b5290ae6d8e6",
+      "dependencies": [
+        "op-woe-binning-v3-f0b703b47050481f9e4cb3",
+        "op-woe-substitution-13bd591d9b2242329608"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_STATS_SSVIF",
+      "op_body": "{\"round\":\"20\",\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"out_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/op_stats_ssvif_1686798840631_dzw@data/ppo3qqkt/vif/stats_ssvif_1686798840631_dzw\",\"feature_names\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"in_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_12_output_1_20230615111400_125\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"out_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/op_stats_ssvif_1686798840632_vqs@data/ppo3qqkt/vif/stats_ssvif_1686798840632_vqs\",\"feature_names\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"in_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_12_output_1_20230615111400_125\"}},\"rt_desc\":{\"beaver_type\":\"tfp\",\"fxp_bits\":24}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_14\",\"job_id\":\"op-stats-ssvif-6e8eb706e3c14e1395b5a160f\",\"code_name\":\"OPERATOR_VIF\",\"name\":\"VIF指标计算\",\"namespace\":\"Ant\",\"op\":\"OP_STATS_SSVIF\",\"dependencies\":[\"ppo3qqkt_node_12\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_12_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_14_output_1\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"feature_names\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"]},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"feature_names\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"]}},\"hyper_params\":{\"round\":\"20\"},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":-218,\\\"y\\\":82,\\\"union_type\\\":\\\"axis1\\\",\\\"featureNames\\\":\\\"x1,x2,x3,x4,x5,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-woe-substitution-13bd591d9b2242329608",
+      "dependencies": [
+        "op-woe-binning-v3-f0b703b47050481f9e4cb3",
+        "op-dataset-split-v2-392044da8da8447b9139"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_WOE_SUBSTITUTION",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"in_woe_binning_meta_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_12_output_2_20230615111400_125\",\"selected_columns\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"out_substitution_rule_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/543b05704e854b3ea23bd854a8a89e3a@data/ppo3qqkt/woe_bin/543b05704e854b3ea23bd854a8a89e3a\",\"in_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_11_output_1_20230615111400_125\",\"out_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_12_output_1_20230615111400_125@data/ppo3qqkt/woe_bin/node_12_output_1_20230615111400_125\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"in_woe_binning_meta_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_12_output_2_20230615111400_125\",\"selected_columns\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"out_substitution_rule_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/543b05704e854b3ea23bd854a8a89e3a@data/ppo3qqkt/woe_bin/543b05704e854b3ea23bd854a8a89e3a\",\"in_data_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_11_output_1_20230615111400_125\",\"out_data_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_12_output_1_20230615111400_125@data/ppo3qqkt/woe_bin/node_12_output_1_20230615111400_125\"}}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_12\",\"job_id\":\"op-woe-binning-packet-4776db53cf284af0b7\",\"code_name\":\"OPERATOR_BINNING_WOE\",\"name\":\"woe分箱\",\"namespace\":\"Ant\",\"op\":\"OP_WOE_BINNING_PACKET\",\"dependencies\":[\"ppo3qqkt_node_11\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_11_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_12_output_1\",\"name\":\"\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_12_output_2\",\"name\":\"\",\"type\":\"virtualobject\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_12_output_3\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"selected_columns\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"all_feature_names\":[\"id1\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"y\"],\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x1\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x2\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x3\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x4\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x5\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x6\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x7\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x8\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x9\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x10\",\"n_divide\":\"10\"}],\"label_field_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"selected_columns\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"all_feature_names\":[\"id2\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x11\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x12\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x13\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x14\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x15\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x16\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x17\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x18\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x19\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x20\",\"n_divide\":\"10\"}]}},\"hyper_params\":{\"cumulate_type\":\"PHE\",\"positive_label\":\"1\"},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":-8,\\\"y\\\":-98,\\\"label_field_name\\\":\\\"y\\\",\\\"binning_method\\\":\\\"quantile\\\",\\\"n_divide\\\":\\\"10\\\",\\\"featureNames\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\\\",\\\"labelName\\\":\\\"y\\\",\\\"feature_names\\\":\\\"x1,x2,x3,x4,x5,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-woe-substitution-8c211b36f71440d5bd31",
+      "dependencies": [
+        "op-dataset-split-v2-392044da8da8447b9139",
+        "op-woe-binning-v3-f0b703b47050481f9e4cb3",
+        "op-woe-substitution-13bd591d9b2242329608"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_WOE_SUBSTITUTION",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"in_woe_binning_meta_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_12_output_2_20230615111400_125\",\"selected_columns\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"out_substitution_rule_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_13_output_2_20230615111400_125@data/ppo3qqkt/woe_bin/node_13_output_2_20230615111400_125\",\"in_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_11_output_2_20230615111400_125\",\"out_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_13_output_1_20230615111400_125@data/ppo3qqkt/woe_bin/node_13_output_1_20230615111400_125\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"in_woe_binning_meta_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_12_output_2_20230615111400_125\",\"selected_columns\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"out_substitution_rule_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_13_output_2_20230615111400_125@data/ppo3qqkt/woe_bin/node_13_output_2_20230615111400_125\",\"in_data_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_11_output_2_20230615111400_125\",\"out_data_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_13_output_1_20230615111400_125@data/ppo3qqkt/woe_bin/node_13_output_1_20230615111400_125\"}}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_13\",\"job_id\":\"op-woe-binning-packet-3dd7084c1c994a3d9e\",\"code_name\":\"OPERATOR_BINNING_WOE\",\"name\":\"woe分箱\",\"namespace\":\"Ant\",\"op\":\"OP_WOE_BINNING_PACKET\",\"dependencies\":[\"ppo3qqkt_node_11\",\"ppo3qqkt_node_12\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_11_output_2\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null},{\"related_id\":\"ppo3qqkt_node_12_output_2\",\"table_id\":null,\"sequence\":2,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_13_output_1\",\"name\":\"\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_13_output_2\",\"name\":\"\",\"type\":\"virtualobject\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_13_output_3\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"selected_columns\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"all_feature_names\":[\"id1\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"y\"],\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x1\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x2\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x3\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x4\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x5\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x6\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x7\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x8\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x9\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x10\",\"n_divide\":\"10\"}],\"label_field_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"selected_columns\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"all_feature_names\":[\"id2\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x11\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x12\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x13\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x14\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x15\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x16\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x17\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x18\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x19\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x20\",\"n_divide\":\"10\"}]}},\"hyper_params\":{\"cumulate_type\":\"PHE\",\"positive_label\":\"1\"},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":230,\\\"y\\\":70,\\\"label_field_name\\\":\\\"y\\\",\\\"binning_method\\\":\\\"quantile\\\",\\\"n_divide\\\":\\\"10\\\",\\\"featureNames\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\\\",\\\"labelName\\\":\\\"y\\\",\\\"feature_names\\\":\\\"x1,x2,x3,x4,x5,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-sslr-v4-a259004477e14ca0985e77a51514f",
+      "dependencies": [
+        "op-woe-binning-v3-f0b703b47050481f9e4cb3",
+        "op-woe-substitution-13bd591d9b2242329608"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_SSLR_V4",
+      "op_body": "{\"p_value\":true,\"batch_size\":\"512\",\"l2_norm\":\"0\",\"max_num_epoches\":\"20\",\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"out_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_2_output_1_20230615111400_125@data/ppo3qqkt/lr_model/node_2_output_1_20230615111400_125\",\"feature_names\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"label_name\":\"y\",\"in_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_12_output_1_20230615111400_125\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"out_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_2_output_1_20230615111400_125@data/ppo3qqkt/lr_model/node_2_output_1_20230615111400_125\",\"feature_names\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"in_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_12_output_1_20230615111400_125\"}},\"sigmoid_type\":\"sr\",\"should_report_weights\":\"True\",\"regression_type\":\"logistic\",\"rt_desc\":{\"beaver_type\":\"TFP\",\"fxp_bits\":30},\"use_ring_128\":true,\"learning_rate\":\"0.1\",\"model_contain_sigmoid_type\":\"True\"}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_2\",\"job_id\":\"op-sslr-v4-89ab5f0c9fc640ab8ffb9276b9881\",\"code_name\":\"OPERATOR_LOGISTIC_REGRESSION\",\"name\":\"逻辑回归\",\"namespace\":\"Ant\",\"op\":\"OP_SSLR_V4\",\"dependencies\":[\"ppo3qqkt_node_12\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_12_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_2_output_1\",\"name\":\"\",\"type\":\"virtualobject\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_2_output_2\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"feature_names\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"label_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"feature_names\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"]}},\"hyper_params\":{\"batch_size\":\"512\",\"l2_norm\":\"0\",\"learning_rate\":\"0.1\",\"max_num_epoches\":\"20\",\"model_contain_sigmoid_type\":\"True\",\"p_value\":true,\"regression_type\":\"logistic\",\"rt_desc\":{\"beaver_type\":\"TFP\",\"fxp_bits\":30},\"should_report_weights\":\"True\",\"sigmoid_type\":\"sr\",\"use_ring_128\":true},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":-8,\\\"y\\\":82,\\\"init_learning_rate\\\":\\\"0.1\\\",\\\"showPorts\\\":false,\\\"learningOption\\\":\\\"constant\\\",\\\"featureNames\\\":\\\"x1,x2,x3,x4,x5,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20\\\",\\\"labelName\\\":\\\"y\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-dataset-split-v2-392044da8da8447b9139",
+      "dependencies": [
+        "op-psi-v3-f3781b3fc4fd46d090a3cad1dd7094"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_DATASET_SPLIT_V2",
+      "op_body": "{\"algorithm_type\":\"FIXED_RATIO\",\"ratio_conf\":{\"rand_seed\":\"0\",\"should_randomize\":\"false\",\"training_data_ratio\":\"70\",\"validation_data_ratio\":\"30\"},\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"second_output_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_11_output_2_20230615111400_125@data/ppo3qqkt/dataset_split/node_11_output_2_20230615111400_125\",\"main_output_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_11_output_1_20230615111400_125@data/ppo3qqkt/dataset_split/node_11_output_1_20230615111400_125\",\"in_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi_table_20230615111400_125\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"second_output_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_11_output_2_20230615111400_125@data/ppo3qqkt/dataset_split/node_11_output_2_20230615111400_125\",\"main_output_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_11_output_1_20230615111400_125@data/ppo3qqkt/dataset_split/node_11_output_1_20230615111400_125\",\"in_data_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/psi_table_20230615111400_125\"}}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_11\",\"job_id\":\"op-dataset-split-v2-e92ec91ffcfb464a87a0\",\"code_name\":\"OPERATOR_RANDOM_SPLIT\",\"name\":\"随机分割\",\"namespace\":\"Ant\",\"op\":\"OP_DATASET_SPLIT_V2\",\"dependencies\":[\"ppo3qqkt_node_9\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_9_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_11_output_1\",\"name\":\"\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_11_output_2\",\"name\":\"\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{}},\"hyper_params\":{\"algorithm_type\":\"FIXED_RATIO\",\"ratio_conf\":{\"rand_seed\":\"0\",\"should_randomize\":\"false\",\"training_data_ratio\":\"70\",\"validation_data_ratio\":\"30\"}},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":2,\\\"y\\\":-188,\\\"showPorts\\\":false,\\\"union_type\\\":\\\"axis1\\\",\\\"featureNames\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\\\",\\\"parties\\\":{\\\"alice-becb78736f69468389f4059ee57a19b9\\\":{\\\"feature_names\\\":[\\\"id1\\\",\\\"x1\\\",\\\"x2\\\",\\\"x3\\\",\\\"x4\\\",\\\"x5\\\",\\\"x6\\\",\\\"x7\\\",\\\"x8\\\",\\\"x9\\\",\\\"x10\\\",\\\"y\\\"]},\\\"bob-f0d56d76b5af4f9abd61029adff7c60a\\\":{\\\"feature_names\\\":[\\\"id2\\\",\\\"x11\\\",\\\"x12\\\",\\\"x13\\\",\\\"x14\\\",\\\"x15\\\",\\\"x16\\\",\\\"x17\\\",\\\"x18\\\",\\\"x19\\\",\\\"x20\\\"]}}}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-inference-v2-4eeeb4cb173746eeadb91e3c",
+      "dependencies": [
+        "op-sslr-v4-a259004477e14ca0985e77a51514f",
+        "op-woe-substitution-8c211b36f71440d5bd31"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_INFERENCE_V2",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"in_model_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_2_output_1_20230615111400_125\",\"in_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_13_output_1_20230615111400_125\",\"out_score_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/prediction_20230615111400_125@data/ppo3qqkt/prediction/20230615111400_125\",\"label_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"in_model_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_2_output_1_20230615111400_125\",\"in_data_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_13_output_1_20230615111400_125\",\"out_score_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/prediction_20230615111400_125@data/ppo3qqkt/prediction/20230615111400_125\"}},\"output_control\":{\"col_names\":[\"id1\",\"x1\",\"x2\"],\"label_field_name\":\"y\",\"output_id\":false,\"output_label\":true,\"score_field_name\":\"prediction\"},\"requester_id\":\"alice-becb78736f69468389f4059ee57a19b9\"}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_3\",\"job_id\":\"op-inference-v2-712d16a33664440683b02390\",\"code_name\":\"OPERATOR_MODEL_PREDICTION\",\"name\":\"模型预测\",\"namespace\":\"Ant\",\"op\":\"OP_INFERENCE_V2\",\"dependencies\":[\"ppo3qqkt_node_2\",\"ppo3qqkt_node_13\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_2_output_1\",\"table_id\":null,\"sequence\":2,\"name\":null,\"type\":null,\"parties\":null},{\"related_id\":\"ppo3qqkt_node_13_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_3_output_1\",\"name\":\"prediction\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"label_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{}},\"hyper_params\":{\"output_control\":{\"col_names\":[\"id1\",\"x1\",\"x2\"],\"label_field_name\":\"y\",\"output_id\":false,\"output_label\":true,\"score_field_name\":\"prediction\"},\"requester_id\":\"alice-becb78736f69468389f4059ee57a19b9\"},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":112,\\\"y\\\":172,\\\"output_name\\\":\\\"prediction\\\",\\\"showPorts\\\":false,\\\"union_type\\\":\\\"axis1\\\",\\\"featureNames\\\":\\\"id1,x1,x2,y,prediction\\\",\\\"sampleTableIds\\\":\\\"24948a613c8f46a389237ff9ad3bf787\\\",\\\"labelName\\\":\\\"y\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-biclassifier-evaluation-v5-91cf6d39ad",
+      "dependencies": [
+        "op-inference-v2-4eeeb4cb173746eeadb91e3c"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_BICLASSIFIER_EVALUATION_V5",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"group_field_name\":\"x1\",\"score_field_name\":\"prediction\",\"in_score_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/prediction_20230615111400_125\",\"bucket_size\":\"10\",\"label_field_name\":\"y\"}},\"positive_label\":\"1\"}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_6\",\"job_id\":\"op-biclassifier-evaluation-v5-106ee721b6\",\"code_name\":\"OPERATOR_BINARY_MODEL_EVALUATION\",\"name\":\"二分类评估\",\"namespace\":\"Ant\",\"op\":\"OP_BICLASSIFIER_EVALUATION_V5\",\"dependencies\":[\"ppo3qqkt_node_3\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_3_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_6_output_1\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_6_output_2\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_6_output_3\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"group_field_name\":\"x1\",\"score_field_name\":\"prediction\",\"bucket_size\":\"10\",\"label_field_name\":\"y\"}},\"hyper_params\":{\"positive_label\":\"1\"},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":250,\\\"y\\\":300,\\\"score_field_name\\\":\\\"prediction\\\",\\\"bucket_size\\\":\\\"10\\\",\\\"label_name\\\":\\\"y\\\",\\\"group_field_name\\\":\\\"x1+double\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-psi-v3-f3781b3fc4fd46d090a3cad1dd7094",
+      "dependencies": [],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_PSI_V3",
+      "op_body": "{\"psi_protocol\":\"ecdh\",\"should_sort\":false,\"num_bins\":64,\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"id_fields\":[\"id1\"],\"output_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi_table_20230615111400_125@data/ppo3qqkt/psi/table_20230615111400_125\",\"input_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:d02aaa0958034a73a27654a674e8f366/24948a613c8f46a389237ff9ad3bf787@20230423\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"id_fields\":[\"id2\"],\"output_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/psi_table_20230615111400_125@data/ppo3qqkt/psi/table_20230615111400_125\",\"input_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:39b0210fb8794cfabec2f3c9ba428669/9eb2c8f27d984c2d9bfed6424dfa3b3e@20230508\"}}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_9\",\"job_id\":\"op-psi-v3-28d9e7e2bdea4b629c6804fe4e02ea\",\"code_name\":\"OPERATOR_PRIVACY_INTERSECTION\",\"name\":\"隐私求交\",\"namespace\":\"Ant\",\"op\":\"OP_PSI_V3\",\"dependencies\":[\"ppo3qqkt_node_1\",\"ppo3qqkt_node_8\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_1_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null},{\"related_id\":\"ppo3qqkt_node_8_output_1\",\"table_id\":null,\"sequence\":2,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_9_output_1\",\"name\":\"psi_table\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"id_fields\":[\"id1\"]},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"id_fields\":[\"id2\"]}},\"hyper_params\":{\"num_bins\":64,\"parties\":{},\"psi_protocol\":\"ecdh\",\"should_sort\":false},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":-98,\\\"y\\\":-278,\\\"showPorts\\\":false,\\\"featureNames\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\\\",\\\"output_name\\\":\\\"psi_table\\\",\\\"parties\\\":{\\\"alice-becb78736f69468389f4059ee57a19b9\\\":{\\\"feature_names\\\":[\\\"x1\\\",\\\"x2\\\",\\\"x3\\\",\\\"x4\\\",\\\"x5\\\",\\\"x6\\\",\\\"x7\\\",\\\"x8\\\",\\\"x9\\\",\\\"x10\\\"]},\\\"bob-f0d56d76b5af4f9abd61029adff7c60a\\\":{\\\"feature_names\\\":[\\\"x11\\\",\\\"x12\\\",\\\"x13\\\",\\\"x14\\\",\\\"x15\\\",\\\"x16\\\",\\\"x17\\\",\\\"x18\\\",\\\"x19\\\",\\\"x20\\\"]}},\\\"selectFeatures\\\":\\\"x1,x2,x3,x4,x5,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20\\\",\\\"join_type\\\":\\\"inner_join\\\",\\\"id_fields\\\":{\\\"24948a613c8f46a389237ff9ad3bf787\\\":[{\\\"associatedKey0\\\":\\\"id1\\\"}],\\\"9eb2c8f27d984c2d9bfed6424dfa3b3e\\\":[{\\\"associatedKey0\\\":\\\"id2\\\"}]},\\\"sampleTables\\\":[{\\\"nodeId\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"tableName\\\":\\\"linear_a_1117\\\",\\\"schemas\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y\\\",\\\"groupKeys\\\":\\\"x1,x2\\\",\\\"schemaTypes\\\":\\\"string,double,double,double,double,double,double,double,double,double,double,double\\\",\\\"associatedKeys\\\":\\\"id1\\\",\\\"sampleTable\\\":\\\"24948a613c8f46a389237ff9ad3bf787\\\"},{\\\"nodeId\\\":\\\"bob-f0d56d76b5af4f9abd61029adff7c60a\\\",\\\"tableName\\\":\\\"linear_b_1117\\\",\\\"schemas\\\":\\\"id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\\\",\\\"groupKeys\\\":\\\"\\\",\\\"schemaTypes\\\":\\\"string,double,double,double,double,double,double,double,double,double,double\\\",\\\"associatedKeys\\\":\\\"id2\\\",\\\"sampleTable\\\":\\\"9eb2c8f27d984c2d9bfed6424dfa3b3e\\\"}]}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-woe-binning-v3-f0b703b47050481f9e4cb3",
+      "dependencies": [
+        "op-dataset-split-v2-392044da8da8447b9139"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        },
+        {
+          "domain_id": "bob-f0d56d76b5af4f9abd61029adff7c60a",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_WOE_BINNING_V3",
+      "op_body": "{\"cumulate_type\":\"PHE\",\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x1\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x2\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x3\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x4\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x5\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x6\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x7\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x8\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x9\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x10\",\"n_divide\":\"10\"}],\"out_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_12_output_2_20230615111400_125@data/ppo3qqkt/woe_bin/node_12_output_2_20230615111400_125\",\"in_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_11_output_1_20230615111400_125\",\"label_field_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x11\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x12\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x13\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x14\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x15\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x16\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x17\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x18\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x19\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x20\",\"n_divide\":\"10\"}],\"out_path\":\"dmdo://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_12_output_2_20230615111400_125@data/ppo3qqkt/woe_bin/node_12_output_2_20230615111400_125\",\"in_path\":\"dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/ppo3qqkt_node_11_output_1_20230615111400_125\"}},\"positive_label\":\"1\"}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_12\",\"job_id\":\"op-woe-binning-packet-4776db53cf284af0b7\",\"code_name\":\"OPERATOR_BINNING_WOE\",\"name\":\"woe分箱\",\"namespace\":\"Ant\",\"op\":\"OP_WOE_BINNING_PACKET\",\"dependencies\":[\"ppo3qqkt_node_11\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_11_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_12_output_1\",\"name\":\"\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_12_output_2\",\"name\":\"\",\"type\":\"virtualobject\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_12_output_3\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"selected_columns\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"],\"all_feature_names\":[\"id1\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"y\"],\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x1\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x2\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x3\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x4\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x5\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x6\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x7\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x8\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x9\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x10\",\"n_divide\":\"10\"}],\"label_field_name\":\"y\"},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"selected_columns\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"all_feature_names\":[\"id2\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"],\"feature_binning_confs\":[{\"binning_method\":\"quantile\",\"feature_name\":\"x11\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x12\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x13\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x14\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x15\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x16\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x17\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x18\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x19\",\"n_divide\":\"10\"},{\"binning_method\":\"quantile\",\"feature_name\":\"x20\",\"n_divide\":\"10\"}]}},\"hyper_params\":{\"cumulate_type\":\"PHE\",\"positive_label\":\"1\"},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":-8,\\\"y\\\":-98,\\\"label_field_name\\\":\\\"y\\\",\\\"binning_method\\\":\\\"quantile\\\",\\\"n_divide\\\":\\\"10\\\",\\\"featureNames\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\\\",\\\"labelName\\\":\\\"y\\\",\\\"feature_names\\\":\\\"x1,x2,x3,x4,x5,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-score-card-v3-c8b911035d21435b974468a",
+      "dependencies": [
+        "op-inference-v2-4eeeb4cb173746eeadb91e3c"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_SCORE_CARD_V3",
+      "op_body": "{\"scaled_value\":\"600\",\"max_score\":\"1000\",\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"out_score_card_spec_path\":\"dmdo://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_15_output_2_20230615111400_125@data/ppo3qqkt/scorecard/node_15_output_2_20230615111400_125\",\"in_data_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/prediction_20230615111400_125\",\"score_field_name\":\"prediction\",\"scorecard_field_name\":\"predict_score\",\"should_add_scorecard_field\":\"true\",\"out_score_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/ppo3qqkt_node_15_output_1_20230615111400_125@data/ppo3qqkt/scorecard/node_15_output_1_20230615111400_125\",\"label_field_name\":\"y\"}},\"bad_label_value\":\"0\",\"positive_label\":\"1\",\"pdo\":\"20\",\"min_score\":\"0\",\"odd_base\":\"20\"}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"ppo3qqkt_node_15\",\"job_id\":\"op-score-card-v3-384400a44855456e9839b77\",\"code_name\":\"OPERATOR_SCORECARD_CONVERSION\",\"name\":\"评分卡转换\",\"namespace\":\"Ant\",\"op\":\"OP_SCORE_CARD_V3\",\"dependencies\":[\"ppo3qqkt_node_3\"],\"params\":{\"input_slots\":[{\"related_id\":\"ppo3qqkt_node_3_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"ppo3qqkt_node_15_output_1\",\"name\":\"\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null},{\"id\":\"ppo3qqkt_node_15_output_2\",\"name\":\"\",\"type\":\"virtualobject\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"score_field_name\":\"prediction\",\"scorecard_field_name\":\"predict_score\",\"should_add_scorecard_field\":\"true\",\"label_field_name\":\"y\"}},\"hyper_params\":{\"bad_label_value\":\"0\",\"max_score\":\"1000\",\"min_score\":\"0\",\"odd_base\":\"20\",\"pdo\":\"20\",\"positive_label\":\"1\",\"scaled_value\":\"600\"},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":420,\\\"y\\\":220,\\\"score_field_name\\\":\\\"prediction\\\",\\\"scorecard_field_name\\\":\\\"predict_score\\\",\\\"should_add_scorecard_field\\\":\\\"true\\\",\\\"showPorts\\\":false,\\\"labelName\\\":\\\"y\\\",\\\"featureNames\\\":\\\"id1,x1,x2,y,,predict_score\\\"}\",\"status\":0,\"is_periodic\":false}"
+    }
+  ],
+  "generateId": null
+}

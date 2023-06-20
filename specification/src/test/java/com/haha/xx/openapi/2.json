@@ -1,0 +1,15 @@
+{
+  "psi_protocol": "ecdh",
+  "should_sort": false,
+  "num_bins": 64,
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "id_fields": [
+        "gn_user_id"
+      ],
+      "output_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi1686561412194_20230616152618_708@data/jvwimlfs/psi/20230616152618_708/20230615/psi1686561412194_20230616152618_708",
+      "input_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:fdd9ee1bc5774af7ba3928314a3880a6/5d1ebfda691d470e8b9437d70fba67de"
+    }
+  },
+  "no_precheck": false
+}

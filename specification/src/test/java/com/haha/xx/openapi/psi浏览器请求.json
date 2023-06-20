@@ -1,0 +1,213 @@
+{
+  "workspace_id": "e1a75102d9834e5696c5abe845716573",
+  "pipeline_id": "jvwimlfs",
+  "components": [
+    {
+      "component_id": "jvwimlfs_node_1",
+      "code_name": "OPERATOR_READ_SAMPLE_TABLE",
+      "name": "读样本表",
+      "namespace": "Ant",
+      "op": "OP_READ_DATA",
+      "dependencies": null,
+      "params": {
+        "input_slots": [],
+        "output_slots": [
+          {
+            "id": "jvwimlfs_node_1_output_1",
+            "name": "",
+            "type": "datatable",
+            "ref_id": null,
+            "ext_info": null
+          }
+        ],
+        "parties": {
+          "alice-becb78736f69468389f4059ee57a19b9": {
+            "time_zone": "GMT+08:00",
+            "partition_by": ""
+          }
+        },
+        "hyper_params": {
+          "table_id": "5d1ebfda691d470e8b9437d70fba67de",
+          "DatePicker": "",
+          "partition_by": "",
+          "bizdate_type": "time",
+          "nodeId": "alice-becb78736f69468389f4059ee57a19b9",
+          "schemas": "",
+          "schemaTypes": "",
+          "associatedKeys": "",
+          "is_partition": false,
+          "rule_type": "${yyyymmdd}",
+          "custom_type": "between",
+          "op_type": "OP_READ_DATA",
+          "parties": {
+            "alice-becb78736f69468389f4059ee57a19b9": {
+              "time_zone": "GMT+08:00",
+              "partition_by": ""
+            }
+          }
+        },
+        "extra_params": {}
+      },
+      "extra": "{\"x\":105,\"y\":53,\"featureNames\":\"\",\"op_type\":\"OP_READ_DATA\"}",
+      "status": 0,
+      "job_id": null,
+      "is_periodic": false
+    },
+    {
+      "component_id": "jvwimlfs_node_2",
+      "code_name": "OPERATOR_READ_SAMPLE_TABLE",
+      "name": "读样本表",
+      "namespace": "Ant",
+      "op": "OP_READ_DATA",
+      "dependencies": null,
+      "params": {
+        "input_slots": [],
+        "output_slots": [
+          {
+            "id": "jvwimlfs_node_2_output_1",
+            "name": "",
+            "type": "datatable",
+            "ref_id": null,
+            "ext_info": null
+          }
+        ],
+        "parties": {
+          "alice-becb78736f69468389f4059ee57a19b9": {
+            "time_zone": "GMT+08:00",
+            "partition_by": ""
+          }
+        },
+        "hyper_params": {
+          "table_id": "5d1ebfda691d470e8b9437d70fba67de",
+          "DatePicker": "",
+          "partition_by": "",
+          "bizdate_type": "time",
+          "nodeId": "alice-becb78736f69468389f4059ee57a19b9",
+          "schemas": "",
+          "schemaTypes": "",
+          "associatedKeys": "",
+          "is_partition": false,
+          "rule_type": "${yyyymmdd}",
+          "custom_type": "between",
+          "op_type": "OP_READ_DATA",
+          "parties": {
+            "alice-becb78736f69468389f4059ee57a19b9": {
+              "time_zone": "GMT+08:00",
+              "partition_by": ""
+            }
+          }
+        },
+        "extra_params": {}
+      },
+      "extra": "{\"x\":330,\"y\":53,\"featureNames\":\"\",\"op_type\":\"OP_READ_DATA\"}",
+      "status": 0,
+      "job_id": null,
+      "is_periodic": false
+    },
+    {
+      "component_id": "jvwimlfs_node_3",
+      "code_name": "OPERATOR_PRIVACY_INTERSECTION",
+      "name": "隐私求交",
+      "namespace": "Ant",
+      "op": "OP_PSI_V3",
+      "dependencies": [
+        "jvwimlfs_node_1",
+        "jvwimlfs_node_2"
+      ],
+      "params": {
+        "input_slots": [
+          {
+            "related_id": "jvwimlfs_node_1_output_1",
+            "table_id": null,
+            "sequence": 1,
+            "name": null,
+            "type": null,
+            "parties": null
+          },
+          {
+            "related_id": "jvwimlfs_node_2_output_1",
+            "table_id": null,
+            "sequence": 2,
+            "name": null,
+            "type": null,
+            "parties": null
+          }
+        ],
+        "output_slots": [
+          {
+            "id": "jvwimlfs_node_3_output_1",
+            "name": "psi1686561412194",
+            "type": "virtualtable",
+            "ref_id": null,
+            "ext_info": null
+          }
+        ],
+        "parties": {
+          "alice-becb78736f69468389f4059ee57a19b9": {
+            "id_fields": [
+              "gn_user_id"
+            ]
+          }
+        },
+        "hyper_params": {
+          "psi_protocol": "ecdh",
+          "num_bins": 64,
+          "should_sort": true,
+          "parties": {
+            "alice-becb78736f69468389f4059ee57a19b9": {
+              "ds_id": "alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab",
+              "path": "",
+              "partition_by": "${yyyymmdd}-0",
+              "time_zone": "GMT+08:00"
+            }
+          }
+        },
+        "extra_params": {}
+      },
+      "extra": "{\"x\":217.5,\"y\":194,\"showPorts\":true,\"join_type\":\"inner_join\",\"output_name\":\"psi1686561412194\",\"featureNames\":\"gn_user_id,site_user_id_ap,item_id_ap,feature_dt_ap,u_first_exp_today,u_last_exp_today,u_first_clk_today,u_last_clk_today,u_exp_cnt_r1d,u_exp_cnt_r7d,u_exp_cnt_r14d,u_exp_cnt_r30d,u_exp_cnt_r90d,u_exp_day_r7d,u_exp_day_r30d,u_exp_day_r90d,u_clk_cnt_r1d,u_clk_cnt_r7d,u_clk_cnt_r14d,u_clk_cnt_r30d,u_clk_cnt_r90d,u_clk_day_r7d,u_clk_day_r30d,u_clk_day_r90d,u_trd_cnt_r1d,u_trd_cnt_r7d,u_trd_cnt_r14d,u_trd_cnt_r30d,u_trd_cnt_r90d,u_ctr_r1d,u_ctr_r7d,u_ctr_r14d,u_ctr_r30d,u_ctr_r90d,u_cvr_r1d,u_cvr_r7d,u_cvr_r14d,u_cvr_r30d,u_cvr_r90d,u_expo_cvr_r1d,u_expo_cvr_r7d,u_expo_cvr_r14d,u_expo_cvr_r30d,u_expo_cvr_r90d,u_expo_old_r30d,u_expo_ind_old_r30d,u_clk_old_r30d,u_trade_old_r30d,u_gift_sensitive_score,u_redpacket_sensitive_score,u_prefer_industry_shopping,u_prefer_industry_game,u_prefer_industry_videomusic,u_prefer_industry_food,u_prefer_industry_sport,u_prefer_industry_telecom,u_prefer_industry_trip,u_prefer_industry_digital,u_voucher_send_cnt_r1d,u_voucher_use_cnt_r1d,u_voucher_decrease_amt_r1d,u_voucher_use_rate_r1d,u_voucher_send_cnt_r7d,u_voucher_use_cnt_r7d,u_voucher_decrease_amt_r7d,u_voucher_use_rate_r7d,u_voucher_send_cnt_r30d,u_voucher_use_cnt_r30d,u_voucher_decrease_amt_r30d,u_voucher_use_rate_r30d,u2i_exp_cnt_r7d,u2i_exp_cnt_r30d,u2i_exp_cnt_r90d,u2i_clk_cnt_r7d,u2i_clk_cnt_r30d,u2i_clk_cnt_r90d,u2i_trd_cnt_r7d,u2i_trd_cnt_r30d,u2i_trd_cnt_r90d,u2i_ctr_r7d,u2i_ctr_r30d,u2i_ctr_r90d,u2i_cvr_r7d,u2i_cvr_r30d,u2i_cvr_r90d,u2i_expo_cvr_r7d,u2i_expo_cvr_r30d,u2i_expo_cvr_r90d,u2i_c_exp_cnt_r7d,u2i_c_exp_cnt_r30d,u2i_c_exp_cnt_r90d,u2i_c_clk_cnt_r7d,u2i_c_clk_cnt_r30d,u2i_c_clk_cnt_r90d,u2i_c_trd_cnt_r7d,u2i_c_trd_cnt_r30d,u2i_c_trd_cnt_r90d,u2i_c_ctr_r7d,u2i_c_ctr_r30d,u2i_c_ctr_r90d,u2i_c_cvr_r7d,u2i_c_cvr_r30d,u2i_c_cvr_r90d,u2i_c_expo_cvr_r7d,u2i_c_expo_cvr_r30d,u2i_c_expo_cvr_r90d,u2i_b_exp_cnt_r7d,u2i_b_exp_cnt_r30d,u2i_b_exp_cnt_r90d,u2i_b_clk_cnt_r7d,u2i_b_clk_cnt_r30d,u2i_b_clk_cnt_r90d,u2i_b_trd_cnt_r7d,u2i_b_trd_cnt_r30d,u2i_b_trd_cnt_r90d,u2i_b_ctr_r7d,u2i_b_ctr_r30d,u2i_b_ctr_r90d,u2i_b_cvr_r7d,u2i_b_cvr_r30d,u2i_b_cvr_r90d,u2i_b_expo_cvr_r7d,u2i_b_expo_cvr_r30d,u2i_b_expo_cvr_r90d,i_stock_cnt,i_sale_cnt,i_exp_cnt_r1d,i_exp_cnt_r7d,i_exp_cnt_r14d,i_exp_cnt_r30d,i_exp_cnt_r90d,i_clk_cnt_r1d,i_clk_cnt_r7d,i_clk_cnt_r14d,i_clk_cnt_r30d,i_clk_cnt_r90d,i_trd_cnt_r1d,i_trd_cnt_r7d,i_trd_cnt_r14d,i_trd_cnt_r30d,i_trd_cnt_r90d,i_ctr_r1d,i_ctr_r7d,i_ctr_r14d,i_ctr_r30d,i_ctr_r90d,i_cvr_r1d,i_cvr_r7d,i_cvr_r14d,i_cvr_r30d,i_cvr_r90d,i_expo_cvr_r1d,i_expo_cvr_r7d,i_expo_cvr_r14d,i_expo_cvr_r30d,i_expo_cvr_r90d,i_c_clk_cnt_r7d,i_c_clk_cnt_r30d,i_c_clk_cnt_r90d,i_c_trd_cnt_r7d,i_c_trd_cnt_r30d,i_c_trd_cnt_r90d,i_c_ctr_r7d,i_c_ctr_r30d,i_c_ctr_r90d,i_c_expo_cvr_r7d,i_c_expo_cvr_r30d,i_c_expo_cvr_r90d,i_b_clk_cnt_r7d,i_b_clk_cnt_r30d,i_b_clk_cnt_r90d,i_b_trd_cnt_r7d,i_b_trd_cnt_r30d,i_b_trd_cnt_r90d,i_b_ctr_r7d,i_b_ctr_r30d,i_b_ctr_r90d,i_b_expo_cvr_r7d,i_b_expo_cvr_r30d,i_b_expo_cvr_r90d,u_group_general_act_high,u_group_general_act_mid,u_group_general_act_low,u_group_general_ind_yx,u_group_general_ind_yy,u_group_general_ind_ms,u_group_general_ind_gw,u_group_general_ind_ty,u_group_general_ind_u,u_pay_top_category_cat_dl,u_pay_top_category_cat_fb,u_pay_top_category_cat_r,u_pay_top_category_cat_o,u_pay_top_category_catcnt,u_pay_top_category_top1_dl,u_pay_top_category_top1_fb,u_pay_top_category_top1_r,u_pay_top_category_top1_o,u_pay_top_brand_apstore,u_pay_top_brand_google,u_pay_top_brand_foodpanda,u_pay_top_brand_deliveroo,u_pay_top_brand_hktvmall,i_discont_ratio,i_discont_amt,i_category_dl,i_category_fb,i_category_r,i_category_o,i_titleseg_eshop,i_titleseg_goog,i_titleseg_ytb,i_titleseg_fp,i_titleseg_hktvmall,i_titleseg_steam,i_titleseg_lol,i_titleseg_hkcash,i_titleseg_mycard,i_titleseg_klook,i_titleseg_paccoffee,i_titleseg_taihing,i_titleseg_bigolive,i_titleseg_pubg,i_titleseg_lookfantastic,i_titleseg_sony,i_titleseg_agoda,i_titleseg_haagendazs,i_titleseg_kkday,i_titleseg_iherb,i_titleseg_viu,i_titleseg_huawei,i_titleseg_deliveroo,i_titleseg_iqiyi,i_titleseg_trip,i_titleseg_mcdonald,i_titleseg_lalamove,i_titleseg_hmvod,i_titleseg_joox,i_titleseg_minecraft,i_titleseg_nintendo,i_titleseg_playstation,i_titleseg_razer,i_titleseg_spotify,i_titleseg_rentacar,i_titleseg_xbox,i_titleseg_suchprice,u_ares_trd_cnt_r180d,u_ares_trd_cnt_r90d,u_ares_trd_cnt_r30d,u_ares_trd_cnt_r7d,u_ares_google_trd_cnt_r90d,u_ares_google_trd_cnt_r30d,u_ares_aprw_trd_cnt_r90d,u_ares_aprw_trd_cnt_r30d,u_ares_cytop_trd_cnt_r90d,u_ares_cytop_trd_cnt_r30d,u_ares_xsq_trd_rt_r90d,u_ares_catdl_trd_rt_r90d,u_ares_catfb_trd_rt_r90d,u_ares_google_trd_rt_r90d,u_ares_google_trd_rt_r30d,u_ares_google_trd_rt_r7d,u_ares_aprw_trd_rt_r90d,u_ares_aprw_trd_rt_r30d,u_ares_aprw_trd_rt_r7d,u_ares_cytop_trd_rt_r90d,u_ares_cytop_trd_rt_r30d,u_ares_cytop_trd_rt_r7d,u_ares_foodpanda_trd_rt_r30d,u_ares_deliveroo_trd_rt_r30d,label,gn_user_id（1）,site_user_id_ap（1）,item_id_ap（1）,feature_dt_ap（1）,u_first_exp_today（1）,u_last_exp_today（1）,u_first_clk_today（1）,u_last_clk_today（1）,u_exp_cnt_r1d（1）,u_exp_cnt_r7d（1）,u_exp_cnt_r14d（1）,u_exp_cnt_r30d（1）,u_exp_cnt_r90d（1）,u_exp_day_r7d（1）,u_exp_day_r30d（1）,u_exp_day_r90d（1）,u_clk_cnt_r1d（1）,u_clk_cnt_r7d（1）,u_clk_cnt_r14d（1）,u_clk_cnt_r30d（1）,u_clk_cnt_r90d（1）,u_clk_day_r7d（1）,u_clk_day_r30d（1）,u_clk_day_r90d（1）,u_trd_cnt_r1d（1）,u_trd_cnt_r7d（1）,u_trd_cnt_r14d（1）,u_trd_cnt_r30d（1）,u_trd_cnt_r90d（1）,u_ctr_r1d（1）,u_ctr_r7d（1）,u_ctr_r14d（1）,u_ctr_r30d（1）,u_ctr_r90d（1）,u_cvr_r1d（1）,u_cvr_r7d（1）,u_cvr_r14d（1）,u_cvr_r30d（1）,u_cvr_r90d（1）,u_expo_cvr_r1d（1）,u_expo_cvr_r7d（1）,u_expo_cvr_r14d（1）,u_expo_cvr_r30d（1）,u_expo_cvr_r90d（1）,u_expo_old_r30d（1）,u_expo_ind_old_r30d（1）,u_clk_old_r30d（1）,u_trade_old_r30d（1）,u_gift_sensitive_score（1）,u_redpacket_sensitive_score（1）,u_prefer_industry_shopping（1）,u_prefer_industry_game（1）,u_prefer_industry_videomusic（1）,u_prefer_industry_food（1）,u_prefer_industry_sport（1）,u_prefer_industry_telecom（1）,u_prefer_industry_trip（1）,u_prefer_industry_digital（1）,u_voucher_send_cnt_r1d（1）,u_voucher_use_cnt_r1d（1）,u_voucher_decrease_amt_r1d（1）,u_voucher_use_rate_r1d（1）,u_voucher_send_cnt_r7d（1）,u_voucher_use_cnt_r7d（1）,u_voucher_decrease_amt_r7d（1）,u_voucher_use_rate_r7d（1）,u_voucher_send_cnt_r30d（1）,u_voucher_use_cnt_r30d（1）,u_voucher_decrease_amt_r30d（1）,u_voucher_use_rate_r30d（1）,u2i_exp_cnt_r7d（1）,u2i_exp_cnt_r30d（1）,u2i_exp_cnt_r90d（1）,u2i_clk_cnt_r7d（1）,u2i_clk_cnt_r30d（1）,u2i_clk_cnt_r90d（1）,u2i_trd_cnt_r7d（1）,u2i_trd_cnt_r30d（1）,u2i_trd_cnt_r90d（1）,u2i_ctr_r7d（1）,u2i_ctr_r30d（1）,u2i_ctr_r90d（1）,u2i_cvr_r7d（1）,u2i_cvr_r30d（1）,u2i_cvr_r90d（1）,u2i_expo_cvr_r7d（1）,u2i_expo_cvr_r30d（1）,u2i_expo_cvr_r90d（1）,u2i_c_exp_cnt_r7d（1）,u2i_c_exp_cnt_r30d（1）,u2i_c_exp_cnt_r90d（1）,u2i_c_clk_cnt_r7d（1）,u2i_c_clk_cnt_r30d（1）,u2i_c_clk_cnt_r90d（1）,u2i_c_trd_cnt_r7d（1）,u2i_c_trd_cnt_r30d（1）,u2i_c_trd_cnt_r90d（1）,u2i_c_ctr_r7d（1）,u2i_c_ctr_r30d（1）,u2i_c_ctr_r90d（1）,u2i_c_cvr_r7d（1）,u2i_c_cvr_r30d（1）,u2i_c_cvr_r90d（1）,u2i_c_expo_cvr_r7d（1）,u2i_c_expo_cvr_r30d（1）,u2i_c_expo_cvr_r90d（1）,u2i_b_exp_cnt_r7d（1）,u2i_b_exp_cnt_r30d（1）,u2i_b_exp_cnt_r90d（1）,u2i_b_clk_cnt_r7d（1）,u2i_b_clk_cnt_r30d（1）,u2i_b_clk_cnt_r90d（1）,u2i_b_trd_cnt_r7d（1）,u2i_b_trd_cnt_r30d（1）,u2i_b_trd_cnt_r90d（1）,u2i_b_ctr_r7d（1）,u2i_b_ctr_r30d（1）,u2i_b_ctr_r90d（1）,u2i_b_cvr_r7d（1）,u2i_b_cvr_r30d（1）,u2i_b_cvr_r90d（1）,u2i_b_expo_cvr_r7d（1）,u2i_b_expo_cvr_r30d（1）,u2i_b_expo_cvr_r90d（1）,i_stock_cnt（1）,i_sale_cnt（1）,i_exp_cnt_r1d（1）,i_exp_cnt_r7d（1）,i_exp_cnt_r14d（1）,i_exp_cnt_r30d（1）,i_exp_cnt_r90d（1）,i_clk_cnt_r1d（1）,i_clk_cnt_r7d（1）,i_clk_cnt_r14d（1）,i_clk_cnt_r30d（1）,i_clk_cnt_r90d（1）,i_trd_cnt_r1d（1）,i_trd_cnt_r7d（1）,i_trd_cnt_r14d（1）,i_trd_cnt_r30d（1）,i_trd_cnt_r90d（1）,i_ctr_r1d（1）,i_ctr_r7d（1）,i_ctr_r14d（1）,i_ctr_r30d（1）,i_ctr_r90d（1）,i_cvr_r1d（1）,i_cvr_r7d（1）,i_cvr_r14d（1）,i_cvr_r30d（1）,i_cvr_r90d（1）,i_expo_cvr_r1d（1）,i_expo_cvr_r7d（1）,i_expo_cvr_r14d（1）,i_expo_cvr_r30d（1）,i_expo_cvr_r90d（1）,i_c_clk_cnt_r7d（1）,i_c_clk_cnt_r30d（1）,i_c_clk_cnt_r90d（1）,i_c_trd_cnt_r7d（1）,i_c_trd_cnt_r30d（1）,i_c_trd_cnt_r90d（1）,i_c_ctr_r7d（1）,i_c_ctr_r30d（1）,i_c_ctr_r90d（1）,i_c_expo_cvr_r7d（1）,i_c_expo_cvr_r30d（1）,i_c_expo_cvr_r90d（1）,i_b_clk_cnt_r7d（1）,i_b_clk_cnt_r30d（1）,i_b_clk_cnt_r90d（1）,i_b_trd_cnt_r7d（1）,i_b_trd_cnt_r30d（1）,i_b_trd_cnt_r90d（1）,i_b_ctr_r7d（1）,i_b_ctr_r30d（1）,i_b_ctr_r90d（1）,i_b_expo_cvr_r7d（1）,i_b_expo_cvr_r30d（1）,i_b_expo_cvr_r90d（1）,u_group_general_act_high（1）,u_group_general_act_mid（1）,u_group_general_act_low（1）,u_group_general_ind_yx（1）,u_group_general_ind_yy（1）,u_group_general_ind_ms（1）,u_group_general_ind_gw（1）,u_group_general_ind_ty（1）,u_group_general_ind_u（1）,u_pay_top_category_cat_dl（1）,u_pay_top_category_cat_fb（1）,u_pay_top_category_cat_r（1）,u_pay_top_category_cat_o（1）,u_pay_top_category_catcnt（1）,u_pay_top_category_top1_dl（1）,u_pay_top_category_top1_fb（1）,u_pay_top_category_top1_r（1）,u_pay_top_category_top1_o（1）,u_pay_top_brand_apstore（1）,u_pay_top_brand_google（1）,u_pay_top_brand_foodpanda（1）,u_pay_top_brand_deliveroo（1）,u_pay_top_brand_hktvmall（1）,i_discont_ratio（1）,i_discont_amt（1）,i_category_dl（1）,i_category_fb（1）,i_category_r（1）,i_category_o（1）,i_titleseg_eshop（1）,i_titleseg_goog（1）,i_titleseg_ytb（1）,i_titleseg_fp（1）,i_titleseg_hktvmall（1）,i_titleseg_steam（1）,i_titleseg_lol（1）,i_titleseg_hkcash（1）,i_titleseg_mycard（1）,i_titleseg_klook（1）,i_titleseg_paccoffee（1）,i_titleseg_taihing（1）,i_titleseg_bigolive（1）,i_titleseg_pubg（1）,i_titleseg_lookfantastic（1）,i_titleseg_sony（1）,i_titleseg_agoda（1）,i_titleseg_haagendazs（1）,i_titleseg_kkday（1）,i_titleseg_iherb（1）,i_titleseg_viu（1）,i_titleseg_huawei（1）,i_titleseg_deliveroo（1）,i_titleseg_iqiyi（1）,i_titleseg_trip（1）,i_titleseg_mcdonald（1）,i_titleseg_lalamove（1）,i_titleseg_hmvod（1）,i_titleseg_joox（1）,i_titleseg_minecraft（1）,i_titleseg_nintendo（1）,i_titleseg_playstation（1）,i_titleseg_razer（1）,i_titleseg_spotify（1）,i_titleseg_rentacar（1）,i_titleseg_xbox（1）,i_titleseg_suchprice（1）,u_ares_trd_cnt_r180d（1）,u_ares_trd_cnt_r90d（1）,u_ares_trd_cnt_r30d（1）,u_ares_trd_cnt_r7d（1）,u_ares_google_trd_cnt_r90d（1）,u_ares_google_trd_cnt_r30d（1）,u_ares_aprw_trd_cnt_r90d（1）,u_ares_aprw_trd_cnt_r30d（1）,u_ares_cytop_trd_cnt_r90d（1）,u_ares_cytop_trd_cnt_r30d（1）,u_ares_xsq_trd_rt_r90d（1）,u_ares_catdl_trd_rt_r90d（1）,u_ares_catfb_trd_rt_r90d（1）,u_ares_google_trd_rt_r90d（1）,u_ares_google_trd_rt_r30d（1）,u_ares_google_trd_rt_r7d（1）,u_ares_aprw_trd_rt_r90d（1）,u_ares_aprw_trd_rt_r30d（1）,u_ares_aprw_trd_rt_r7d（1）,u_ares_cytop_trd_rt_r90d（1）,u_ares_cytop_trd_rt_r30d（1）,u_ares_cytop_trd_rt_r7d（1）,u_ares_foodpanda_trd_rt_r30d（1）,u_ares_deliveroo_trd_rt_r30d（1）,label（1）\",\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"feature_names\":[]}},\"selectFeatures\":\"gn_user_id\",\"id_fields\":{\"5d1ebfda691d470e8b9437d70fba67de\":[{\"associatedKey0\":\"gn_user_id（1）\"}]},\"sampleTables\":[{\"nodeId\":\"alice-becb78736f69468389f4059ee57a19b9\",\"tableName\":\"ap_data\",\"schemas\":\"gn_user_id,site_user_id_ap,item_id_ap,feature_dt_ap,u_first_exp_today,u_last_exp_today,u_first_clk_today,u_last_clk_today,u_exp_cnt_r1d,u_exp_cnt_r7d,u_exp_cnt_r14d,u_exp_cnt_r30d,u_exp_cnt_r90d,u_exp_day_r7d,u_exp_day_r30d,u_exp_day_r90d,u_clk_cnt_r1d,u_clk_cnt_r7d,u_clk_cnt_r14d,u_clk_cnt_r30d,u_clk_cnt_r90d,u_clk_day_r7d,u_clk_day_r30d,u_clk_day_r90d,u_trd_cnt_r1d,u_trd_cnt_r7d,u_trd_cnt_r14d,u_trd_cnt_r30d,u_trd_cnt_r90d,u_ctr_r1d,u_ctr_r7d,u_ctr_r14d,u_ctr_r30d,u_ctr_r90d,u_cvr_r1d,u_cvr_r7d,u_cvr_r14d,u_cvr_r30d,u_cvr_r90d,u_expo_cvr_r1d,u_expo_cvr_r7d,u_expo_cvr_r14d,u_expo_cvr_r30d,u_expo_cvr_r90d,u_expo_old_r30d,u_expo_ind_old_r30d,u_clk_old_r30d,u_trade_old_r30d,u_gift_sensitive_score,u_redpacket_sensitive_score,u_prefer_industry_shopping,u_prefer_industry_game,u_prefer_industry_videomusic,u_prefer_industry_food,u_prefer_industry_sport,u_prefer_industry_telecom,u_prefer_industry_trip,u_prefer_industry_digital,u_voucher_send_cnt_r1d,u_voucher_use_cnt_r1d,u_voucher_decrease_amt_r1d,u_voucher_use_rate_r1d,u_voucher_send_cnt_r7d,u_voucher_use_cnt_r7d,u_voucher_decrease_amt_r7d,u_voucher_use_rate_r7d,u_voucher_send_cnt_r30d,u_voucher_use_cnt_r30d,u_voucher_decrease_amt_r30d,u_voucher_use_rate_r30d,u2i_exp_cnt_r7d,u2i_exp_cnt_r30d,u2i_exp_cnt_r90d,u2i_clk_cnt_r7d,u2i_clk_cnt_r30d,u2i_clk_cnt_r90d,u2i_trd_cnt_r7d,u2i_trd_cnt_r30d,u2i_trd_cnt_r90d,u2i_ctr_r7d,u2i_ctr_r30d,u2i_ctr_r90d,u2i_cvr_r7d,u2i_cvr_r30d,u2i_cvr_r90d,u2i_expo_cvr_r7d,u2i_expo_cvr_r30d,u2i_expo_cvr_r90d,u2i_c_exp_cnt_r7d,u2i_c_exp_cnt_r30d,u2i_c_exp_cnt_r90d,u2i_c_clk_cnt_r7d,u2i_c_clk_cnt_r30d,u2i_c_clk_cnt_r90d,u2i_c_trd_cnt_r7d,u2i_c_trd_cnt_r30d,u2i_c_trd_cnt_r90d,u2i_c_ctr_r7d,u2i_c_ctr_r30d,u2i_c_ctr_r90d,u2i_c_cvr_r7d,u2i_c_cvr_r30d,u2i_c_cvr_r90d,u2i_c_expo_cvr_r7d,u2i_c_expo_cvr_r30d,u2i_c_expo_cvr_r90d,u2i_b_exp_cnt_r7d,u2i_b_exp_cnt_r30d,u2i_b_exp_cnt_r90d,u2i_b_clk_cnt_r7d,u2i_b_clk_cnt_r30d,u2i_b_clk_cnt_r90d,u2i_b_trd_cnt_r7d,u2i_b_trd_cnt_r30d,u2i_b_trd_cnt_r90d,u2i_b_ctr_r7d,u2i_b_ctr_r30d,u2i_b_ctr_r90d,u2i_b_cvr_r7d,u2i_b_cvr_r30d,u2i_b_cvr_r90d,u2i_b_expo_cvr_r7d,u2i_b_expo_cvr_r30d,u2i_b_expo_cvr_r90d,i_stock_cnt,i_sale_cnt,i_exp_cnt_r1d,i_exp_cnt_r7d,i_exp_cnt_r14d,i_exp_cnt_r30d,i_exp_cnt_r90d,i_clk_cnt_r1d,i_clk_cnt_r7d,i_clk_cnt_r14d,i_clk_cnt_r30d,i_clk_cnt_r90d,i_trd_cnt_r1d,i_trd_cnt_r7d,i_trd_cnt_r14d,i_trd_cnt_r30d,i_trd_cnt_r90d,i_ctr_r1d,i_ctr_r7d,i_ctr_r14d,i_ctr_r30d,i_ctr_r90d,i_cvr_r1d,i_cvr_r7d,i_cvr_r14d,i_cvr_r30d,i_cvr_r90d,i_expo_cvr_r1d,i_expo_cvr_r7d,i_expo_cvr_r14d,i_expo_cvr_r30d,i_expo_cvr_r90d,i_c_clk_cnt_r7d,i_c_clk_cnt_r30d,i_c_clk_cnt_r90d,i_c_trd_cnt_r7d,i_c_trd_cnt_r30d,i_c_trd_cnt_r90d,i_c_ctr_r7d,i_c_ctr_r30d,i_c_ctr_r90d,i_c_expo_cvr_r7d,i_c_expo_cvr_r30d,i_c_expo_cvr_r90d,i_b_clk_cnt_r7d,i_b_clk_cnt_r30d,i_b_clk_cnt_r90d,i_b_trd_cnt_r7d,i_b_trd_cnt_r30d,i_b_trd_cnt_r90d,i_b_ctr_r7d,i_b_ctr_r30d,i_b_ctr_r90d,i_b_expo_cvr_r7d,i_b_expo_cvr_r30d,i_b_expo_cvr_r90d,u_group_general_act_high,u_group_general_act_mid,u_group_general_act_low,u_group_general_ind_yx,u_group_general_ind_yy,u_group_general_ind_ms,u_group_general_ind_gw,u_group_general_ind_ty,u_group_general_ind_u,u_pay_top_category_cat_dl,u_pay_top_category_cat_fb,u_pay_top_category_cat_r,u_pay_top_category_cat_o,u_pay_top_category_catcnt,u_pay_top_category_top1_dl,u_pay_top_category_top1_fb,u_pay_top_category_top1_r,u_pay_top_category_top1_o,u_pay_top_brand_apstore,u_pay_top_brand_google,u_pay_top_brand_foodpanda,u_pay_top_brand_deliveroo,u_pay_top_brand_hktvmall,i_discont_ratio,i_discont_amt,i_category_dl,i_category_fb,i_category_r,i_category_o,i_titleseg_eshop,i_titleseg_goog,i_titleseg_ytb,i_titleseg_fp,i_titleseg_hktvmall,i_titleseg_steam,i_titleseg_lol,i_titleseg_hkcash,i_titleseg_mycard,i_titleseg_klook,i_titleseg_paccoffee,i_titleseg_taihing,i_titleseg_bigolive,i_titleseg_pubg,i_titleseg_lookfantastic,i_titleseg_sony,i_titleseg_agoda,i_titleseg_haagendazs,i_titleseg_kkday,i_titleseg_iherb,i_titleseg_viu,i_titleseg_huawei,i_titleseg_deliveroo,i_titleseg_iqiyi,i_titleseg_trip,i_titleseg_mcdonald,i_titleseg_lalamove,i_titleseg_hmvod,i_titleseg_joox,i_titleseg_minecraft,i_titleseg_nintendo,i_titleseg_playstation,i_titleseg_razer,i_titleseg_spotify,i_titleseg_rentacar,i_titleseg_xbox,i_titleseg_suchprice,u_ares_trd_cnt_r180d,u_ares_trd_cnt_r90d,u_ares_trd_cnt_r30d,u_ares_trd_cnt_r7d,u_ares_google_trd_cnt_r90d,u_ares_google_trd_cnt_r30d,u_ares_aprw_trd_cnt_r90d,u_ares_aprw_trd_cnt_r30d,u_ares_cytop_trd_cnt_r90d,u_ares_cytop_trd_cnt_r30d,u_ares_xsq_trd_rt_r90d,u_ares_catdl_trd_rt_r90d,u_ares_catfb_trd_rt_r90d,u_ares_google_trd_rt_r90d,u_ares_google_trd_rt_r30d,u_ares_google_trd_rt_r7d,u_ares_aprw_trd_rt_r90d,u_ares_aprw_trd_rt_r30d,u_ares_aprw_trd_rt_r7d,u_ares_cytop_trd_rt_r90d,u_ares_cytop_trd_rt_r30d,u_ares_cytop_trd_rt_r7d,u_ares_foodpanda_trd_rt_r30d,u_ares_deliveroo_trd_rt_r30d,label\",\"groupKeys\":\"\",\"schemaTypes\":\"string,string,string,string,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double\",\"associatedKeys\":\"gn_user_id,site_user_id_ap,item_id_ap,feature_dt_ap\",\"sampleTable\":\"5d1ebfda691d470e8b9437d70fba67de\"},{\"nodeId\":\"alice-becb78736f69468389f4059ee57a19b9\",\"tableName\":\"ap_data\",\"schemas\":\"gn_user_id（1）,site_user_id_ap（1）,item_id_ap（1）,feature_dt_ap（1）,u_first_exp_today（1）,u_last_exp_today（1）,u_first_clk_today（1）,u_last_clk_today（1）,u_exp_cnt_r1d（1）,u_exp_cnt_r7d（1）,u_exp_cnt_r14d（1）,u_exp_cnt_r30d（1）,u_exp_cnt_r90d（1）,u_exp_day_r7d（1）,u_exp_day_r30d（1）,u_exp_day_r90d（1）,u_clk_cnt_r1d（1）,u_clk_cnt_r7d（1）,u_clk_cnt_r14d（1）,u_clk_cnt_r30d（1）,u_clk_cnt_r90d（1）,u_clk_day_r7d（1）,u_clk_day_r30d（1）,u_clk_day_r90d（1）,u_trd_cnt_r1d（1）,u_trd_cnt_r7d（1）,u_trd_cnt_r14d（1）,u_trd_cnt_r30d（1）,u_trd_cnt_r90d（1）,u_ctr_r1d（1）,u_ctr_r7d（1）,u_ctr_r14d（1）,u_ctr_r30d（1）,u_ctr_r90d（1）,u_cvr_r1d（1）,u_cvr_r7d（1）,u_cvr_r14d（1）,u_cvr_r30d（1）,u_cvr_r90d（1）,u_expo_cvr_r1d（1）,u_expo_cvr_r7d（1）,u_expo_cvr_r14d（1）,u_expo_cvr_r30d（1）,u_expo_cvr_r90d（1）,u_expo_old_r30d（1）,u_expo_ind_old_r30d（1）,u_clk_old_r30d（1）,u_trade_old_r30d（1）,u_gift_sensitive_score（1）,u_redpacket_sensitive_score（1）,u_prefer_industry_shopping（1）,u_prefer_industry_game（1）,u_prefer_industry_videomusic（1）,u_prefer_industry_food（1）,u_prefer_industry_sport（1）,u_prefer_industry_telecom（1）,u_prefer_industry_trip（1）,u_prefer_industry_digital（1）,u_voucher_send_cnt_r1d（1）,u_voucher_use_cnt_r1d（1）,u_voucher_decrease_amt_r1d（1）,u_voucher_use_rate_r1d（1）,u_voucher_send_cnt_r7d（1）,u_voucher_use_cnt_r7d（1）,u_voucher_decrease_amt_r7d（1）,u_voucher_use_rate_r7d（1）,u_voucher_send_cnt_r30d（1）,u_voucher_use_cnt_r30d（1）,u_voucher_decrease_amt_r30d（1）,u_voucher_use_rate_r30d（1）,u2i_exp_cnt_r7d（1）,u2i_exp_cnt_r30d（1）,u2i_exp_cnt_r90d（1）,u2i_clk_cnt_r7d（1）,u2i_clk_cnt_r30d（1）,u2i_clk_cnt_r90d（1）,u2i_trd_cnt_r7d（1）,u2i_trd_cnt_r30d（1）,u2i_trd_cnt_r90d（1）,u2i_ctr_r7d（1）,u2i_ctr_r30d（1）,u2i_ctr_r90d（1）,u2i_cvr_r7d（1）,u2i_cvr_r30d（1）,u2i_cvr_r90d（1）,u2i_expo_cvr_r7d（1）,u2i_expo_cvr_r30d（1）,u2i_expo_cvr_r90d（1）,u2i_c_exp_cnt_r7d（1）,u2i_c_exp_cnt_r30d（1）,u2i_c_exp_cnt_r90d（1）,u2i_c_clk_cnt_r7d（1）,u2i_c_clk_cnt_r30d（1）,u2i_c_clk_cnt_r90d（1）,u2i_c_trd_cnt_r7d（1）,u2i_c_trd_cnt_r30d（1）,u2i_c_trd_cnt_r90d（1）,u2i_c_ctr_r7d（1）,u2i_c_ctr_r30d（1）,u2i_c_ctr_r90d（1）,u2i_c_cvr_r7d（1）,u2i_c_cvr_r30d（1）,u2i_c_cvr_r90d（1）,u2i_c_expo_cvr_r7d（1）,u2i_c_expo_cvr_r30d（1）,u2i_c_expo_cvr_r90d（1）,u2i_b_exp_cnt_r7d（1）,u2i_b_exp_cnt_r30d（1）,u2i_b_exp_cnt_r90d（1）,u2i_b_clk_cnt_r7d（1）,u2i_b_clk_cnt_r30d（1）,u2i_b_clk_cnt_r90d（1）,u2i_b_trd_cnt_r7d（1）,u2i_b_trd_cnt_r30d（1）,u2i_b_trd_cnt_r90d（1）,u2i_b_ctr_r7d（1）,u2i_b_ctr_r30d（1）,u2i_b_ctr_r90d（1）,u2i_b_cvr_r7d（1）,u2i_b_cvr_r30d（1）,u2i_b_cvr_r90d（1）,u2i_b_expo_cvr_r7d（1）,u2i_b_expo_cvr_r30d（1）,u2i_b_expo_cvr_r90d（1）,i_stock_cnt（1）,i_sale_cnt（1）,i_exp_cnt_r1d（1）,i_exp_cnt_r7d（1）,i_exp_cnt_r14d（1）,i_exp_cnt_r30d（1）,i_exp_cnt_r90d（1）,i_clk_cnt_r1d（1）,i_clk_cnt_r7d（1）,i_clk_cnt_r14d（1）,i_clk_cnt_r30d（1）,i_clk_cnt_r90d（1）,i_trd_cnt_r1d（1）,i_trd_cnt_r7d（1）,i_trd_cnt_r14d（1）,i_trd_cnt_r30d（1）,i_trd_cnt_r90d（1）,i_ctr_r1d（1）,i_ctr_r7d（1）,i_ctr_r14d（1）,i_ctr_r30d（1）,i_ctr_r90d（1）,i_cvr_r1d（1）,i_cvr_r7d（1）,i_cvr_r14d（1）,i_cvr_r30d（1）,i_cvr_r90d（1）,i_expo_cvr_r1d（1）,i_expo_cvr_r7d（1）,i_expo_cvr_r14d（1）,i_expo_cvr_r30d（1）,i_expo_cvr_r90d（1）,i_c_clk_cnt_r7d（1）,i_c_clk_cnt_r30d（1）,i_c_clk_cnt_r90d（1）,i_c_trd_cnt_r7d（1）,i_c_trd_cnt_r30d（1）,i_c_trd_cnt_r90d（1）,i_c_ctr_r7d（1）,i_c_ctr_r30d（1）,i_c_ctr_r90d（1）,i_c_expo_cvr_r7d（1）,i_c_expo_cvr_r30d（1）,i_c_expo_cvr_r90d（1）,i_b_clk_cnt_r7d（1）,i_b_clk_cnt_r30d（1）,i_b_clk_cnt_r90d（1）,i_b_trd_cnt_r7d（1）,i_b_trd_cnt_r30d（1）,i_b_trd_cnt_r90d（1）,i_b_ctr_r7d（1）,i_b_ctr_r30d（1）,i_b_ctr_r90d（1）,i_b_expo_cvr_r7d（1）,i_b_expo_cvr_r30d（1）,i_b_expo_cvr_r90d（1）,u_group_general_act_high（1）,u_group_general_act_mid（1）,u_group_general_act_low（1）,u_group_general_ind_yx（1）,u_group_general_ind_yy（1）,u_group_general_ind_ms（1）,u_group_general_ind_gw（1）,u_group_general_ind_ty（1）,u_group_general_ind_u（1）,u_pay_top_category_cat_dl（1）,u_pay_top_category_cat_fb（1）,u_pay_top_category_cat_r（1）,u_pay_top_category_cat_o（1）,u_pay_top_category_catcnt（1）,u_pay_top_category_top1_dl（1）,u_pay_top_category_top1_fb（1）,u_pay_top_category_top1_r（1）,u_pay_top_category_top1_o（1）,u_pay_top_brand_apstore（1）,u_pay_top_brand_google（1）,u_pay_top_brand_foodpanda（1）,u_pay_top_brand_deliveroo（1）,u_pay_top_brand_hktvmall（1）,i_discont_ratio（1）,i_discont_amt（1）,i_category_dl（1）,i_category_fb（1）,i_category_r（1）,i_category_o（1）,i_titleseg_eshop（1）,i_titleseg_goog（1）,i_titleseg_ytb（1）,i_titleseg_fp（1）,i_titleseg_hktvmall（1）,i_titleseg_steam（1）,i_titleseg_lol（1）,i_titleseg_hkcash（1）,i_titleseg_mycard（1）,i_titleseg_klook（1）,i_titleseg_paccoffee（1）,i_titleseg_taihing（1）,i_titleseg_bigolive（1）,i_titleseg_pubg（1）,i_titleseg_lookfantastic（1）,i_titleseg_sony（1）,i_titleseg_agoda（1）,i_titleseg_haagendazs（1）,i_titleseg_kkday（1）,i_titleseg_iherb（1）,i_titleseg_viu（1）,i_titleseg_huawei（1）,i_titleseg_deliveroo（1）,i_titleseg_iqiyi（1）,i_titleseg_trip（1）,i_titleseg_mcdonald（1）,i_titleseg_lalamove（1）,i_titleseg_hmvod（1）,i_titleseg_joox（1）,i_titleseg_minecraft（1）,i_titleseg_nintendo（1）,i_titleseg_playstation（1）,i_titleseg_razer（1）,i_titleseg_spotify（1）,i_titleseg_rentacar（1）,i_titleseg_xbox（1）,i_titleseg_suchprice（1）,u_ares_trd_cnt_r180d（1）,u_ares_trd_cnt_r90d（1）,u_ares_trd_cnt_r30d（1）,u_ares_trd_cnt_r7d（1）,u_ares_google_trd_cnt_r90d（1）,u_ares_google_trd_cnt_r30d（1）,u_ares_aprw_trd_cnt_r90d（1）,u_ares_aprw_trd_cnt_r30d（1）,u_ares_cytop_trd_cnt_r90d（1）,u_ares_cytop_trd_cnt_r30d（1）,u_ares_xsq_trd_rt_r90d（1）,u_ares_catdl_trd_rt_r90d（1）,u_ares_catfb_trd_rt_r90d（1）,u_ares_google_trd_rt_r90d（1）,u_ares_google_trd_rt_r30d（1）,u_ares_google_trd_rt_r7d（1）,u_ares_aprw_trd_rt_r90d（1）,u_ares_aprw_trd_rt_r30d（1）,u_ares_aprw_trd_rt_r7d（1）,u_ares_cytop_trd_rt_r90d（1）,u_ares_cytop_trd_rt_r30d（1）,u_ares_cytop_trd_rt_r7d（1）,u_ares_foodpanda_trd_rt_r30d（1）,u_ares_deliveroo_trd_rt_r30d（1）,label（1）\",\"groupKeys\":\"\",\"schemaTypes\":\"string,string,string,string,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double\",\"associatedKeys\":\"gn_user_id（1）,site_user_id_ap（1）,item_id_ap（1）,feature_dt_ap（1）\",\"sampleTable\":\"5d1ebfda691d470e8b9437d70fba67de\"}],\"result_address\":[{\"ds_id\":\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\",\"disabledPath\":\"dev/alice/gjyxdata\",\"node_id\":\"alice-becb78736f69468389f4059ee57a19b9\",\"date\":\"${yyyymmdd}\",\"operator\":\"-\",\"partition_by\":0},{\"ds_id\":\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\",\"disabledPath\":\"dev/alice/gjyxdata\",\"node_id\":\"alice-becb78736f69468389f4059ee57a19b9\",\"date\":\"${yyyymmdd}\",\"operator\":\"-\",\"partition_by\":0}]}",
+      "status": 0,
+      "job_id": null,
+      "is_periodic": false
+    },
+    {
+      "component_id": "jvwimlfs_node_4",
+      "code_name": "OPERATOR_TABLE_STATISTIC",
+      "name": "全表统计",
+      "namespace": "Ant",
+      "op": "OP_TABLE_STATISTICS",
+      "dependencies": [
+        "jvwimlfs_node_3"
+      ],
+      "params": {
+        "input_slots": [
+          {
+            "related_id": "jvwimlfs_node_3_output_1",
+            "table_id": null,
+            "sequence": 1,
+            "name": null,
+            "type": null,
+            "parties": null
+          }
+        ],
+        "output_slots": [
+          {
+            "id": "jvwimlfs_node_4_output_1",
+            "name": "",
+            "type": "report",
+            "ref_id": null,
+            "ext_info": null
+          }
+        ],
+        "parties": {
+          "alice-becb78736f69468389f4059ee57a19b9": {}
+        },
+        "hyper_params": {},
+        "extra_params": {}
+      },
+      "extra": "{\"x\":217.5,\"y\":335,\"union_type\":\"axis1\",\"featureNames\":\"gn_user_id\"}",
+      "status": 0,
+      "job_id": null,
+      "is_periodic": false
+    }
+  ]
+}

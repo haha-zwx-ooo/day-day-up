@@ -1,0 +1,64 @@
+{
+  "virtual": false,
+  "component_id": "ppo3qqkt_node_9",
+  "job_id": "op-psi-v3-28d9e7e2bdea4b629c6804fe4e02ea",
+  "code_name": "OPERATOR_PRIVACY_INTERSECTION",
+  "name": "隐私求交",
+  "namespace": "Ant",
+  "op": "OP_PSI_V3",
+  "dependencies": [
+    "ppo3qqkt_node_1",
+    "ppo3qqkt_node_8"
+  ],
+  "params": {
+    "input_slots": [
+      {
+        "related_id": "ppo3qqkt_node_1_output_1",
+        "table_id": null,
+        "sequence": 1,
+        "name": null,
+        "type": null,
+        "parties": null
+      },
+      {
+        "related_id": "ppo3qqkt_node_8_output_1",
+        "table_id": null,
+        "sequence": 2,
+        "name": null,
+        "type": null,
+        "parties": null
+      }
+    ],
+    "output_slots": [
+      {
+        "id": "ppo3qqkt_node_9_output_1",
+        "name": "psi_table",
+        "type": "virtualtable",
+        "ref_id": null,
+        "ext_info": null
+      }
+    ],
+    "parties": {
+      "alice-becb78736f69468389f4059ee57a19b9": {
+        "id_fields": [
+          "id1"
+        ]
+      },
+      "bob-f0d56d76b5af4f9abd61029adff7c60a": {
+        "id_fields": [
+          "id2"
+        ]
+      }
+    },
+    "hyper_params": {
+      "num_bins": 64,
+      "parties": {},
+      "psi_protocol": "ecdh",
+      "should_sort": false
+    },
+    "extra_params": {}
+  },
+  "extra": "{\"x\":-98,\"y\":-278,\"showPorts\":false,\"featureNames\":\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\",\"output_name\":\"psi_table\",\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"feature_names\":[\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\"]},\"bob-f0d56d76b5af4f9abd61029adff7c60a\":{\"feature_names\":[\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\"]}},\"selectFeatures\":\"x1,x2,x3,x4,x5,x11,x12,x13,x14,x15,x6,x7,x8,x9,x10,x16,x17,x18,x19,x20\",\"join_type\":\"inner_join\",\"id_fields\":{\"24948a613c8f46a389237ff9ad3bf787\":[{\"associatedKey0\":\"id1\"}],\"9eb2c8f27d984c2d9bfed6424dfa3b3e\":[{\"associatedKey0\":\"id2\"}]},\"sampleTables\":[{\"nodeId\":\"alice-becb78736f69468389f4059ee57a19b9\",\"tableName\":\"linear_a_1117\",\"schemas\":\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y\",\"groupKeys\":\"x1,x2\",\"schemaTypes\":\"string,double,double,double,double,double,double,double,double,double,double,double\",\"associatedKeys\":\"id1\",\"sampleTable\":\"24948a613c8f46a389237ff9ad3bf787\"},{\"nodeId\":\"bob-f0d56d76b5af4f9abd61029adff7c60a\",\"tableName\":\"linear_b_1117\",\"schemas\":\"id2,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20\",\"groupKeys\":\"\",\"schemaTypes\":\"string,double,double,double,double,double,double,double,double,double,double\",\"associatedKeys\":\"id2\",\"sampleTable\":\"9eb2c8f27d984c2d9bfed6424dfa3b3e\"}]}",
+  "status": 0,
+  "is_periodic": false
+}

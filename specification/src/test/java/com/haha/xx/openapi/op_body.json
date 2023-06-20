@@ -1,0 +1,21 @@
+{
+  "psi_protocol": "ecdh",
+  "should_sort": false,
+  "num_bins": 64,
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "id_fields": [
+        "id1"
+      ],
+      "output_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi_table_20230615111400_125@data/ppo3qqkt/psi/table_20230615111400_125",
+      "input_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:d02aaa0958034a73a27654a674e8f366/24948a613c8f46a389237ff9ad3bf787@20230423"
+    },
+    "bob-f0d56d76b5af4f9abd61029adff7c60a": {
+      "id_fields": [
+        "id2"
+      ],
+      "output_path": "dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:07b4e34dc63a4fc78546dcfe275fc0c5/psi_table_20230615111400_125@data/ppo3qqkt/psi/table_20230615111400_125",
+      "input_path": "dmdt://bob-f0d56d76b5af4f9abd61029adff7c60a:39b0210fb8794cfabec2f3c9ba428669/9eb2c8f27d984c2d9bfed6424dfa3b3e@20230508"
+    }
+  }
+}

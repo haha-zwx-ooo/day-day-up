@@ -23,7 +23,7 @@ public class DateSpec {
 
     public static void main(String[] args) {
         //TODO Date 时间可读性差，需要
-        LocalDateTime now = LocalDateTime.now(ZoneId.systemDefault());
+        LocalDateTime now = LocalDateTime.now(ZoneId.of("UTC+8"));
         log.info("LocalDateTime {}", now);
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
         String localDateTimeFormatter = now.format(dateTimeFormatter);

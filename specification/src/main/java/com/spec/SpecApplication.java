@@ -14,6 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class SpecApplication {
     public static void main(String[] args) {
+        log.info("在项目启动前打印日志...");
         ConfigurableApplicationContext context = SpringApplication.run(SpecApplication.class, args);
         log.info(" SpecApplication run success {}", context);
     }
