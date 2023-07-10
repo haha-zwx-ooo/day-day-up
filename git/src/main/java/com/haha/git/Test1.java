@@ -9,4 +9,7 @@ package com.haha.git;
  * @version Test1.java, v 0.1 2023年07月10日 21:35 雨土
  */
 public class Test1 {
+    public static void main(String[] args) {
+        
+    }
 }
