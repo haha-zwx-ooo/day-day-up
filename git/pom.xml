@@ -8,16 +8,14 @@
         <artifactId>day-day-up</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <name>工具集合</name>
-    <artifactId>utils</artifactId>
 
-    <dependencies>
-        <!--        org.apache.commons:commons-lang3:3.12.0-->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
-        </dependency>
-    </dependencies>
+    <groupId>com.aliapy</groupId>
+    <artifactId>git</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>

@@ -1,0 +1,43 @@
+{
+  "flow_id": "0418499c37f345a9952966088f7640c3",
+  "notify_url": null,
+  "parties": null,
+  "schedule_policy": null,
+  "jobs": [
+    {
+      "job_id": "op-table-statistics-44821f6cbbe845d18a44",
+      "dependencies": [
+        "op-psi-v3-ec9eab92bb894ca3bf05edb62d6bf3"
+      ],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_TABLE_STATISTICS",
+      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"in_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi1686561412194_20230620144555_609\"}}}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"jvwimlfs_node_4\",\"job_id\":null,\"code_name\":\"OPERATOR_TABLE_STATISTIC\",\"name\":\"全表统计\",\"namespace\":\"Ant\",\"op\":\"OP_TABLE_STATISTICS\",\"dependencies\":[\"jvwimlfs_node_3\"],\"params\":{\"input_slots\":[{\"related_id\":\"jvwimlfs_node_3_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"jvwimlfs_node_4_output_1\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{}},\"hyper_params\":{},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":217.5,\\\"y\\\":335,\\\"union_type\\\":\\\"axis1\\\",\\\"featureNames\\\":\\\"gn_user_id\\\"}\",\"status\":0,\"is_periodic\":false}"
+    },
+    {
+      "job_id": "op-psi-v3-ec9eab92bb894ca3bf05edb62d6bf3",
+      "dependencies": [],
+      "parties": [
+        {
+          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
+          "role": null,
+          "version": null
+        }
+      ],
+      "op_type": "OP_PSI_V3",
+      "op_body": "{\"psi_protocol\":\"ecdh\",\"should_sort\":false,\"num_bins\":64,\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"id_fields\":[\"id1\"],\"output_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi1686561412194_20230620144555_609@data/jvwimlfs/psi/20230620144555_609/20230619/psi1686561412194_20230620144555_609\",\"input_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:d02aaa0958034a73a27654a674e8f366/24948a613c8f46a389237ff9ad3bf787@20230510\"}},\"no_precheck\":false}",
+      "app": "mpc_trainer",
+      "central_domain": null,
+      "component": "{\"virtual\":false,\"component_id\":\"jvwimlfs_node_3\",\"job_id\":null,\"code_name\":\"OPERATOR_PRIVACY_INTERSECTION\",\"name\":\"隐私求交\",\"namespace\":\"Ant\",\"op\":\"OP_PSI_V3\",\"dependencies\":[\"jvwimlfs_node_1\",\"jvwimlfs_node_2\"],\"params\":{\"input_slots\":[{\"related_id\":\"jvwimlfs_node_1_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null},{\"related_id\":\"jvwimlfs_node_2_output_1\",\"table_id\":null,\"sequence\":2,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"jvwimlfs_node_3_output_1\",\"name\":\"psi1686561412194\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"id_fields\":[\"id1\"]}},\"hyper_params\":{\"no_precheck\":false,\"psi_protocol\":\"ecdh\",\"num_bins\":64,\"should_sort\":false,\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"ds_id\":\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\",\"path\":\"\",\"partition_by\":\"${yyyymmdd}-0\",\"time_zone\":\"GMT+08:00\"}}},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":140,\\\"y\\\":160,\\\"showPorts\\\":true,\\\"join_type\\\":\\\"inner_join\\\",\\\"output_name\\\":\\\"psi1686561412194\\\",\\\"featureNames\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,id1（1）,x1（1）,x2（1）,x3（1）,x4（1）,x5（1）,x6（1）,x7（1）,x8（1）,x9（1）,x10（1）,y（1）\\\",\\\"parties\\\":{\\\"alice-becb78736f69468389f4059ee57a19b9\\\":{\\\"feature_names\\\":[\\\"id1（1）\\\",\\\"x1（1）\\\",\\\"x2（1）\\\",\\\"x3（1）\\\",\\\"x4（1）\\\",\\\"x5（1）\\\",\\\"x6（1）\\\",\\\"x7（1）\\\",\\\"x8（1）\\\",\\\"x9（1）\\\",\\\"x10（1）\\\",\\\"y（1）\\\"]}},\\\"selectFeatures\\\":\\\"x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y,x1（1）,x2（1）,x3（1）,x4（1）,x5（1）,x6（1）,x7（1）,x8（1）,x9（1）,x10（1）,y（1）,id1,id1（1）\\\",\\\"id_fields\\\":{\\\"24948a613c8f46a389237ff9ad3bf787\\\":[{\\\"associatedKey0\\\":\\\"id1\\\"}]},\\\"sampleTables\\\":[{\\\"nodeId\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"tableName\\\":\\\"linear_a_1117\\\",\\\"schemas\\\":\\\"id1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,y\\\",\\\"groupKeys\\\":\\\"x1,x2,y\\\",\\\"schemaTypes\\\":\\\"string,double,double,double,double,double,double,double,double,double,double,double\\\",\\\"associatedKeys\\\":\\\"id1,x3\\\",\\\"sampleTable\\\":\\\"24948a613c8f46a389237ff9ad3bf787\\\"},{\\\"nodeId\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"tableName\\\":\\\"linear_a_1117\\\",\\\"schemas\\\":\\\"id1（1）,x1（1）,x2（1）,x3（1）,x4（1）,x5（1）,x6（1）,x7（1）,x8（1）,x9（1）,x10（1）,y（1）\\\",\\\"groupKeys\\\":\\\"x1（1）,x2（1）,y（1）\\\",\\\"schemaTypes\\\":\\\"string,double,double,double,double,double,double,double,double,double,double,double\\\",\\\"associatedKeys\\\":\\\"id1（1）,x3（1）\\\",\\\"sampleTable\\\":\\\"24948a613c8f46a389237ff9ad3bf787\\\"}],\\\"result_address\\\":[{\\\"ds_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\\\",\\\"disabledPath\\\":\\\"dev/alice/gjyxdata\\\",\\\"node_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"date\\\":\\\"${yyyymmdd}\\\",\\\"operator\\\":\\\"-\\\",\\\"partition_by\\\":0},{\\\"ds_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\\\",\\\"disabledPath\\\":\\\"dev/alice/gjyxdata\\\",\\\"node_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"date\\\":\\\"${yyyymmdd}\\\",\\\"operator\\\":\\\"-\\\",\\\"partition_by\\\":0}]}\",\"status\":0,\"is_periodic\":false}"
+    }
+  ],
+  "generateId": null
+}

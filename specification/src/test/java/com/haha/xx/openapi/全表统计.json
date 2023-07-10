@@ -1,0 +1,40 @@
+{
+  "input_slots": [
+    {
+      "related_id": "jvwimlfs_node_3_output_1_20230620110907_463",
+      "table_id": null,
+      "sequence": 1,
+      "name": null,
+      "type": null,
+      "parties": null
+    }
+  ],
+  "output_slots": [
+    {
+      "id": "jvwimlfs_node_4_output_1_20230620110907_463",
+      "name": "",
+      "type": "report",
+      "ref_id": null,
+      "ext_info": null
+    }
+  ],
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "in_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi1686561412194_20230620110907_463"
+    }
+  },
+  "hyper_params": {},
+  "extra_params": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "partitionInfo": null,
+      "schemaInfos": [],
+      "predictComponent": null,
+      "records": null,
+      "columnsName": null,
+      "columnsType": null,
+      "isSkip": null,
+      "model_config": null,
+      "model_submit_params": null
+    }
+  }
+}

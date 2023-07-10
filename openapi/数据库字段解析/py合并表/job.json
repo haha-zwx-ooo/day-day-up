@@ -1,0 +1,205 @@
+{
+  "inputs": {
+    "alice-becb78736f69468389f4059ee57a19b9": [
+      {
+        "id": "24948a613c8f46a389237ff9ad3bf787@20230509",
+        "name": "input0",
+        "type": "Worktable",
+        "schema": [
+          {
+            "col_name": "id1",
+            "col_type": "string",
+            "col_comment": null
+          },
+          {
+            "col_name": "x1",
+            "col_type": "double",
+            "col_comment": "描述"
+          },
+          {
+            "col_name": "x2",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x3",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x4",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x5",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x6",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x7",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x8",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x9",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x10",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "y",
+            "col_type": "double",
+            "col_comment": null
+          }
+        ]
+      },
+      {
+        "id": "24948a613c8f46a389237ff9ad3bf787@20230510",
+        "name": "input1",
+        "type": "Worktable",
+        "schema": [
+          {
+            "col_name": "id1",
+            "col_type": "string",
+            "col_comment": null
+          },
+          {
+            "col_name": "x1",
+            "col_type": "double",
+            "col_comment": "描述"
+          },
+          {
+            "col_name": "x2",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x3",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x4",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x5",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x6",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x7",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x8",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x9",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "x10",
+            "col_type": "double",
+            "col_comment": null
+          },
+          {
+            "col_name": "y",
+            "col_type": "double",
+            "col_comment": null
+          }
+        ]
+      }
+    ]
+  },
+  "outputs": {
+    "alice-becb78736f69468389f4059ee57a19b9": [
+      {
+        "dsID": "alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab",
+        "id": "xy3y7vck_node_1_output_1_20230705164147_353",
+        "name": "output0",
+        "type": "FedTable",
+        "extras": {
+          "mapping_name_prefix": "data/xy3y7vck/read_table/node_1_output_1_20230705164147_353"
+        }
+      }
+    ]
+  },
+  "extra": null,
+  "codes": "# 请根据输入输出配置填写对应的ARGS.变量名\nfrom typing import List\nfrom fascia.api.feddata import FedData\nfrom fascia.args import ARGS\nimport secretflow as sf\nfrom secretflow.data.io.util import open as sfopen\nfrom secretflow.data.io.util import Path\n\ndef merge_data():\n    fed_data_list =  []\n    fedData = FedData([ARGS.input0])\n    fed_data_list.append(fedData)\n    fedData = FedData([ARGS.input1])\n    fed_data_list.append(fedData)\n    output_fed_data = FedData(ARGS.output0, is_csv=True, fed_type='vertical')\n\n    local_paths = {}\n    for fed_data in fed_data_list:\n        for device, path in fed_data.file_local_path.items():\n            if device not in local_paths:\n                local_paths[device] = []\n            local_paths[device].append(path)\n\n    # 合并数据\n    def merge(source_files: List[str], output_path: str):\n        Path(output_path).parent.mkdir(parents=True, exist_ok=True)\n        out_file = sfopen(output_path, \"w\")\n        with_header = True\n        header = None\n        for source_file in source_files:\n            with sfopen(source_file, 'r') as in_file:\n                for lineno, line in enumerate(in_file):\n                    if lineno == 0 and with_header:\n                        with_header = False\n                        header = line\n                    elif lineno == 0:\n                        assert header == line, f\"file has different header: '{header}' != '{line}'\"\n                        continue\n                    if len(line) == 0:\n                        continue\n                    out_file.write(line)\n                    if not line.endswith(\"\\n\"):\n                        out_file.write(\"\\n\")\n\n        out_file.close()\n\n    output_local_path = output_fed_data.file_local_path\n\n    res = []\n    for device, paths in local_paths.items():\n        res.append(device(merge)(paths, output_local_path[device]))\n\n    sf.wait(res)\n\n    # 推送数据到远端\n    output_fed_data.dtypes = fed_data_list[0].dtypes\n    output_fed_data.save()\n\nmerge_data()",
+  "input_slots": [
+    {
+      "related_id": "xy3y7vck_node_1_output_1_20230705164147_266",
+      "table_id": "24948a613c8f46a389237ff9ad3bf787",
+      "sequence": 1,
+      "name": null,
+      "type": "datatable",
+      "parties": {
+        "alice-becb78736f69468389f4059ee57a19b9": {
+          "tableName": null,
+          "path": null,
+          "time_zone": "GMT+08:00",
+          "biz_time": null,
+          "partition_by": "20230509",
+          "ds_id": null
+        }
+      }
+    },
+    {
+      "related_id": "xy3y7vck_node_1_output_1_20230705164147_266",
+      "table_id": "24948a613c8f46a389237ff9ad3bf787",
+      "sequence": 2,
+      "name": null,
+      "type": "datatable",
+      "parties": {
+        "alice-becb78736f69468389f4059ee57a19b9": {
+          "tableName": null,
+          "path": null,
+          "time_zone": "GMT+08:00",
+          "biz_time": null,
+          "partition_by": "20230510",
+          "ds_id": null
+        }
+      }
+    }
+  ],
+  "output_slots": [
+    {
+      "id": "xy3y7vck_node_1_output_1_20230705164147_353",
+      "name": "",
+      "type": "virtualtable",
+      "ref_id": null,
+      "ext_info": null
+    }
+  ],
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {}
+  },
+  "hyper_params": {},
+  "extra_params": {}
+}

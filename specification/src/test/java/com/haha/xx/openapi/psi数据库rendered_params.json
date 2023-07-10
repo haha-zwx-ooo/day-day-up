@@ -1,0 +1,74 @@
+{
+  "input_slots": [
+    {
+      "related_id": "jvwimlfs_node_1_output_1_20230620110907_463",
+      "table_id": null,
+      "sequence": 1,
+      "name": null,
+      "type": null,
+      "parties": null
+    },
+    {
+      "related_id": "jvwimlfs_node_2_output_1_20230620110907_463",
+      "table_id": null,
+      "sequence": 2,
+      "name": null,
+      "type": null,
+      "parties": null
+    }
+  ],
+  "output_slots": [
+    {
+      "id": "jvwimlfs_node_3_output_1_20230620110907_463",
+      "name": "psi1686561412194_20230620110907_463",
+      "type": "virtualtable",
+      "ref_id": null,
+      "ext_info": null
+    }
+  ],
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "id_fields": [
+        "id1"
+      ],
+      "output_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi1686561412194_20230620110907_463@data/jvwimlfs/psi/20230620110907_463/20230619/psi1686561412194_20230620110907_463",
+      "input_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:d02aaa0958034a73a27654a674e8f366/24948a613c8f46a389237ff9ad3bf787@20230510"
+    }
+  },
+  "hyper_params": {
+    "parties": {
+      "alice-becb78736f69468389f4059ee57a19b9": {
+        "ds_id": "alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab",
+        "partition_by": "${yyyymmdd}-0",
+        "path": "",
+        "time_zone": "GMT+08:00"
+      }
+    },
+    "no_precheck": false,
+    "psi_protocol": "ecdh",
+    "should_sort": false,
+    "num_bins": 64
+  },
+  "extra_params": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "partitionInfo": null,
+      "schemaInfos": [
+        {
+          "colName": "id1",
+          "column": {
+            "col_name": "id1",
+            "col_type": "string",
+            "col_comment": null
+          }
+        }
+      ],
+      "predictComponent": null,
+      "records": null,
+      "columnsName": null,
+      "columnsType": null,
+      "isSkip": null,
+      "model_config": null,
+      "model_submit_params": null
+    }
+  }
+}

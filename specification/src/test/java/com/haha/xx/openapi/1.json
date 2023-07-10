@@ -1,43 +1,537 @@
 {
-  "flow_id": "ec6bd7c71c034d4b9ed3a1a725514fe1",
-  "notify_url": null,
-  "parties": null,
-  "schedule_policy": null,
-  "jobs": [
+  "success": true,
+  "code": 0,
+  "message": "成功",
+  "data": [
     {
-      "job_id": "op-psi-v3-fe0e621be7364213b75ed322b0219b",
-      "dependencies": [],
-      "parties": [
-        {
-          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
-          "role": null,
-          "version": null
-        }
-      ],
-      "op_type": "OP_PSI_V3",
-      "op_body": "{\"psi_protocol\":\"ecdh\",\"should_sort\":false,\"num_bins\":64,\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"id_fields\":[\"gn_user_id\"],\"output_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi1686561412194_20230616152618_708@data/jvwimlfs/psi/20230616152618_708/20230615/psi1686561412194_20230616152618_708\",\"input_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:fdd9ee1bc5774af7ba3928314a3880a6/5d1ebfda691d470e8b9437d70fba67de\"}},\"no_precheck\":false}",
-      "app": "mpc_trainer",
-      "central_domain": null,
-      "component": "{\"virtual\":false,\"component_id\":\"jvwimlfs_node_3\",\"job_id\":null,\"code_name\":\"OPERATOR_PRIVACY_INTERSECTION\",\"name\":\"隐私求交\",\"namespace\":\"Ant\",\"op\":\"OP_PSI_V3\",\"dependencies\":[\"jvwimlfs_node_1\",\"jvwimlfs_node_2\"],\"params\":{\"input_slots\":[{\"related_id\":\"jvwimlfs_node_1_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null},{\"related_id\":\"jvwimlfs_node_2_output_1\",\"table_id\":null,\"sequence\":2,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"jvwimlfs_node_3_output_1\",\"name\":\"psi1686561412194\",\"type\":\"virtualtable\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"id_fields\":[\"gn_user_id\"]}},\"hyper_params\":{\"no_precheck\":false,\"psi_protocol\":\"ecdh\",\"num_bins\":64,\"should_sort\":false,\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"ds_id\":\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\",\"path\":\"\",\"partition_by\":\"${yyyymmdd}-0\",\"time_zone\":\"GMT+08:00\"}}},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":140,\\\"y\\\":160,\\\"showPorts\\\":true,\\\"join_type\\\":\\\"inner_join\\\",\\\"output_name\\\":\\\"psi1686561412194\\\",\\\"featureNames\\\":\\\"gn_user_id,site_user_id_ap,item_id_ap,feature_dt_ap,u_first_exp_today,u_last_exp_today,u_first_clk_today,u_last_clk_today,u_exp_cnt_r1d,u_exp_cnt_r7d,u_exp_cnt_r14d,u_exp_cnt_r30d,u_exp_cnt_r90d,u_exp_day_r7d,u_exp_day_r30d,u_exp_day_r90d,u_clk_cnt_r1d,u_clk_cnt_r7d,u_clk_cnt_r14d,u_clk_cnt_r30d,u_clk_cnt_r90d,u_clk_day_r7d,u_clk_day_r30d,u_clk_day_r90d,u_trd_cnt_r1d,u_trd_cnt_r7d,u_trd_cnt_r14d,u_trd_cnt_r30d,u_trd_cnt_r90d,u_ctr_r1d,u_ctr_r7d,u_ctr_r14d,u_ctr_r30d,u_ctr_r90d,u_cvr_r1d,u_cvr_r7d,u_cvr_r14d,u_cvr_r30d,u_cvr_r90d,u_expo_cvr_r1d,u_expo_cvr_r7d,u_expo_cvr_r14d,u_expo_cvr_r30d,u_expo_cvr_r90d,u_expo_old_r30d,u_expo_ind_old_r30d,u_clk_old_r30d,u_trade_old_r30d,u_gift_sensitive_score,u_redpacket_sensitive_score,u_prefer_industry_shopping,u_prefer_industry_game,u_prefer_industry_videomusic,u_prefer_industry_food,u_prefer_industry_sport,u_prefer_industry_telecom,u_prefer_industry_trip,u_prefer_industry_digital,u_voucher_send_cnt_r1d,u_voucher_use_cnt_r1d,u_voucher_decrease_amt_r1d,u_voucher_use_rate_r1d,u_voucher_send_cnt_r7d,u_voucher_use_cnt_r7d,u_voucher_decrease_amt_r7d,u_voucher_use_rate_r7d,u_voucher_send_cnt_r30d,u_voucher_use_cnt_r30d,u_voucher_decrease_amt_r30d,u_voucher_use_rate_r30d,u2i_exp_cnt_r7d,u2i_exp_cnt_r30d,u2i_exp_cnt_r90d,u2i_clk_cnt_r7d,u2i_clk_cnt_r30d,u2i_clk_cnt_r90d,u2i_trd_cnt_r7d,u2i_trd_cnt_r30d,u2i_trd_cnt_r90d,u2i_ctr_r7d,u2i_ctr_r30d,u2i_ctr_r90d,u2i_cvr_r7d,u2i_cvr_r30d,u2i_cvr_r90d,u2i_expo_cvr_r7d,u2i_expo_cvr_r30d,u2i_expo_cvr_r90d,u2i_c_exp_cnt_r7d,u2i_c_exp_cnt_r30d,u2i_c_exp_cnt_r90d,u2i_c_clk_cnt_r7d,u2i_c_clk_cnt_r30d,u2i_c_clk_cnt_r90d,u2i_c_trd_cnt_r7d,u2i_c_trd_cnt_r30d,u2i_c_trd_cnt_r90d,u2i_c_ctr_r7d,u2i_c_ctr_r30d,u2i_c_ctr_r90d,u2i_c_cvr_r7d,u2i_c_cvr_r30d,u2i_c_cvr_r90d,u2i_c_expo_cvr_r7d,u2i_c_expo_cvr_r30d,u2i_c_expo_cvr_r90d,u2i_b_exp_cnt_r7d,u2i_b_exp_cnt_r30d,u2i_b_exp_cnt_r90d,u2i_b_clk_cnt_r7d,u2i_b_clk_cnt_r30d,u2i_b_clk_cnt_r90d,u2i_b_trd_cnt_r7d,u2i_b_trd_cnt_r30d,u2i_b_trd_cnt_r90d,u2i_b_ctr_r7d,u2i_b_ctr_r30d,u2i_b_ctr_r90d,u2i_b_cvr_r7d,u2i_b_cvr_r30d,u2i_b_cvr_r90d,u2i_b_expo_cvr_r7d,u2i_b_expo_cvr_r30d,u2i_b_expo_cvr_r90d,i_stock_cnt,i_sale_cnt,i_exp_cnt_r1d,i_exp_cnt_r7d,i_exp_cnt_r14d,i_exp_cnt_r30d,i_exp_cnt_r90d,i_clk_cnt_r1d,i_clk_cnt_r7d,i_clk_cnt_r14d,i_clk_cnt_r30d,i_clk_cnt_r90d,i_trd_cnt_r1d,i_trd_cnt_r7d,i_trd_cnt_r14d,i_trd_cnt_r30d,i_trd_cnt_r90d,i_ctr_r1d,i_ctr_r7d,i_ctr_r14d,i_ctr_r30d,i_ctr_r90d,i_cvr_r1d,i_cvr_r7d,i_cvr_r14d,i_cvr_r30d,i_cvr_r90d,i_expo_cvr_r1d,i_expo_cvr_r7d,i_expo_cvr_r14d,i_expo_cvr_r30d,i_expo_cvr_r90d,i_c_clk_cnt_r7d,i_c_clk_cnt_r30d,i_c_clk_cnt_r90d,i_c_trd_cnt_r7d,i_c_trd_cnt_r30d,i_c_trd_cnt_r90d,i_c_ctr_r7d,i_c_ctr_r30d,i_c_ctr_r90d,i_c_expo_cvr_r7d,i_c_expo_cvr_r30d,i_c_expo_cvr_r90d,i_b_clk_cnt_r7d,i_b_clk_cnt_r30d,i_b_clk_cnt_r90d,i_b_trd_cnt_r7d,i_b_trd_cnt_r30d,i_b_trd_cnt_r90d,i_b_ctr_r7d,i_b_ctr_r30d,i_b_ctr_r90d,i_b_expo_cvr_r7d,i_b_expo_cvr_r30d,i_b_expo_cvr_r90d,u_group_general_act_high,u_group_general_act_mid,u_group_general_act_low,u_group_general_ind_yx,u_group_general_ind_yy,u_group_general_ind_ms,u_group_general_ind_gw,u_group_general_ind_ty,u_group_general_ind_u,u_pay_top_category_cat_dl,u_pay_top_category_cat_fb,u_pay_top_category_cat_r,u_pay_top_category_cat_o,u_pay_top_category_catcnt,u_pay_top_category_top1_dl,u_pay_top_category_top1_fb,u_pay_top_category_top1_r,u_pay_top_category_top1_o,u_pay_top_brand_apstore,u_pay_top_brand_google,u_pay_top_brand_foodpanda,u_pay_top_brand_deliveroo,u_pay_top_brand_hktvmall,i_discont_ratio,i_discont_amt,i_category_dl,i_category_fb,i_category_r,i_category_o,i_titleseg_eshop,i_titleseg_goog,i_titleseg_ytb,i_titleseg_fp,i_titleseg_hktvmall,i_titleseg_steam,i_titleseg_lol,i_titleseg_hkcash,i_titleseg_mycard,i_titleseg_klook,i_titleseg_paccoffee,i_titleseg_taihing,i_titleseg_bigolive,i_titleseg_pubg,i_titleseg_lookfantastic,i_titleseg_sony,i_titleseg_agoda,i_titleseg_haagendazs,i_titleseg_kkday,i_titleseg_iherb,i_titleseg_viu,i_titleseg_huawei,i_titleseg_deliveroo,i_titleseg_iqiyi,i_titleseg_trip,i_titleseg_mcdonald,i_titleseg_lalamove,i_titleseg_hmvod,i_titleseg_joox,i_titleseg_minecraft,i_titleseg_nintendo,i_titleseg_playstation,i_titleseg_razer,i_titleseg_spotify,i_titleseg_rentacar,i_titleseg_xbox,i_titleseg_suchprice,u_ares_trd_cnt_r180d,u_ares_trd_cnt_r90d,u_ares_trd_cnt_r30d,u_ares_trd_cnt_r7d,u_ares_google_trd_cnt_r90d,u_ares_google_trd_cnt_r30d,u_ares_aprw_trd_cnt_r90d,u_ares_aprw_trd_cnt_r30d,u_ares_cytop_trd_cnt_r90d,u_ares_cytop_trd_cnt_r30d,u_ares_xsq_trd_rt_r90d,u_ares_catdl_trd_rt_r90d,u_ares_catfb_trd_rt_r90d,u_ares_google_trd_rt_r90d,u_ares_google_trd_rt_r30d,u_ares_google_trd_rt_r7d,u_ares_aprw_trd_rt_r90d,u_ares_aprw_trd_rt_r30d,u_ares_aprw_trd_rt_r7d,u_ares_cytop_trd_rt_r90d,u_ares_cytop_trd_rt_r30d,u_ares_cytop_trd_rt_r7d,u_ares_foodpanda_trd_rt_r30d,u_ares_deliveroo_trd_rt_r30d,label,gn_user_id（1）,site_user_id_ap（1）,item_id_ap（1）,feature_dt_ap（1）,u_first_exp_today（1）,u_last_exp_today（1）,u_first_clk_today（1）,u_last_clk_today（1）,u_exp_cnt_r1d（1）,u_exp_cnt_r7d（1）,u_exp_cnt_r14d（1）,u_exp_cnt_r30d（1）,u_exp_cnt_r90d（1）,u_exp_day_r7d（1）,u_exp_day_r30d（1）,u_exp_day_r90d（1）,u_clk_cnt_r1d（1）,u_clk_cnt_r7d（1）,u_clk_cnt_r14d（1）,u_clk_cnt_r30d（1）,u_clk_cnt_r90d（1）,u_clk_day_r7d（1）,u_clk_day_r30d（1）,u_clk_day_r90d（1）,u_trd_cnt_r1d（1）,u_trd_cnt_r7d（1）,u_trd_cnt_r14d（1）,u_trd_cnt_r30d（1）,u_trd_cnt_r90d（1）,u_ctr_r1d（1）,u_ctr_r7d（1）,u_ctr_r14d（1）,u_ctr_r30d（1）,u_ctr_r90d（1）,u_cvr_r1d（1）,u_cvr_r7d（1）,u_cvr_r14d（1）,u_cvr_r30d（1）,u_cvr_r90d（1）,u_expo_cvr_r1d（1）,u_expo_cvr_r7d（1）,u_expo_cvr_r14d（1）,u_expo_cvr_r30d（1）,u_expo_cvr_r90d（1）,u_expo_old_r30d（1）,u_expo_ind_old_r30d（1）,u_clk_old_r30d（1）,u_trade_old_r30d（1）,u_gift_sensitive_score（1）,u_redpacket_sensitive_score（1）,u_prefer_industry_shopping（1）,u_prefer_industry_game（1）,u_prefer_industry_videomusic（1）,u_prefer_industry_food（1）,u_prefer_industry_sport（1）,u_prefer_industry_telecom（1）,u_prefer_industry_trip（1）,u_prefer_industry_digital（1）,u_voucher_send_cnt_r1d（1）,u_voucher_use_cnt_r1d（1）,u_voucher_decrease_amt_r1d（1）,u_voucher_use_rate_r1d（1）,u_voucher_send_cnt_r7d（1）,u_voucher_use_cnt_r7d（1）,u_voucher_decrease_amt_r7d（1）,u_voucher_use_rate_r7d（1）,u_voucher_send_cnt_r30d（1）,u_voucher_use_cnt_r30d（1）,u_voucher_decrease_amt_r30d（1）,u_voucher_use_rate_r30d（1）,u2i_exp_cnt_r7d（1）,u2i_exp_cnt_r30d（1）,u2i_exp_cnt_r90d（1）,u2i_clk_cnt_r7d（1）,u2i_clk_cnt_r30d（1）,u2i_clk_cnt_r90d（1）,u2i_trd_cnt_r7d（1）,u2i_trd_cnt_r30d（1）,u2i_trd_cnt_r90d（1）,u2i_ctr_r7d（1）,u2i_ctr_r30d（1）,u2i_ctr_r90d（1）,u2i_cvr_r7d（1）,u2i_cvr_r30d（1）,u2i_cvr_r90d（1）,u2i_expo_cvr_r7d（1）,u2i_expo_cvr_r30d（1）,u2i_expo_cvr_r90d（1）,u2i_c_exp_cnt_r7d（1）,u2i_c_exp_cnt_r30d（1）,u2i_c_exp_cnt_r90d（1）,u2i_c_clk_cnt_r7d（1）,u2i_c_clk_cnt_r30d（1）,u2i_c_clk_cnt_r90d（1）,u2i_c_trd_cnt_r7d（1）,u2i_c_trd_cnt_r30d（1）,u2i_c_trd_cnt_r90d（1）,u2i_c_ctr_r7d（1）,u2i_c_ctr_r30d（1）,u2i_c_ctr_r90d（1）,u2i_c_cvr_r7d（1）,u2i_c_cvr_r30d（1）,u2i_c_cvr_r90d（1）,u2i_c_expo_cvr_r7d（1）,u2i_c_expo_cvr_r30d（1）,u2i_c_expo_cvr_r90d（1）,u2i_b_exp_cnt_r7d（1）,u2i_b_exp_cnt_r30d（1）,u2i_b_exp_cnt_r90d（1）,u2i_b_clk_cnt_r7d（1）,u2i_b_clk_cnt_r30d（1）,u2i_b_clk_cnt_r90d（1）,u2i_b_trd_cnt_r7d（1）,u2i_b_trd_cnt_r30d（1）,u2i_b_trd_cnt_r90d（1）,u2i_b_ctr_r7d（1）,u2i_b_ctr_r30d（1）,u2i_b_ctr_r90d（1）,u2i_b_cvr_r7d（1）,u2i_b_cvr_r30d（1）,u2i_b_cvr_r90d（1）,u2i_b_expo_cvr_r7d（1）,u2i_b_expo_cvr_r30d（1）,u2i_b_expo_cvr_r90d（1）,i_stock_cnt（1）,i_sale_cnt（1）,i_exp_cnt_r1d（1）,i_exp_cnt_r7d（1）,i_exp_cnt_r14d（1）,i_exp_cnt_r30d（1）,i_exp_cnt_r90d（1）,i_clk_cnt_r1d（1）,i_clk_cnt_r7d（1）,i_clk_cnt_r14d（1）,i_clk_cnt_r30d（1）,i_clk_cnt_r90d（1）,i_trd_cnt_r1d（1）,i_trd_cnt_r7d（1）,i_trd_cnt_r14d（1）,i_trd_cnt_r30d（1）,i_trd_cnt_r90d（1）,i_ctr_r1d（1）,i_ctr_r7d（1）,i_ctr_r14d（1）,i_ctr_r30d（1）,i_ctr_r90d（1）,i_cvr_r1d（1）,i_cvr_r7d（1）,i_cvr_r14d（1）,i_cvr_r30d（1）,i_cvr_r90d（1）,i_expo_cvr_r1d（1）,i_expo_cvr_r7d（1）,i_expo_cvr_r14d（1）,i_expo_cvr_r30d（1）,i_expo_cvr_r90d（1）,i_c_clk_cnt_r7d（1）,i_c_clk_cnt_r30d（1）,i_c_clk_cnt_r90d（1）,i_c_trd_cnt_r7d（1）,i_c_trd_cnt_r30d（1）,i_c_trd_cnt_r90d（1）,i_c_ctr_r7d（1）,i_c_ctr_r30d（1）,i_c_ctr_r90d（1）,i_c_expo_cvr_r7d（1）,i_c_expo_cvr_r30d（1）,i_c_expo_cvr_r90d（1）,i_b_clk_cnt_r7d（1）,i_b_clk_cnt_r30d（1）,i_b_clk_cnt_r90d（1）,i_b_trd_cnt_r7d（1）,i_b_trd_cnt_r30d（1）,i_b_trd_cnt_r90d（1）,i_b_ctr_r7d（1）,i_b_ctr_r30d（1）,i_b_ctr_r90d（1）,i_b_expo_cvr_r7d（1）,i_b_expo_cvr_r30d（1）,i_b_expo_cvr_r90d（1）,u_group_general_act_high（1）,u_group_general_act_mid（1）,u_group_general_act_low（1）,u_group_general_ind_yx（1）,u_group_general_ind_yy（1）,u_group_general_ind_ms（1）,u_group_general_ind_gw（1）,u_group_general_ind_ty（1）,u_group_general_ind_u（1）,u_pay_top_category_cat_dl（1）,u_pay_top_category_cat_fb（1）,u_pay_top_category_cat_r（1）,u_pay_top_category_cat_o（1）,u_pay_top_category_catcnt（1）,u_pay_top_category_top1_dl（1）,u_pay_top_category_top1_fb（1）,u_pay_top_category_top1_r（1）,u_pay_top_category_top1_o（1）,u_pay_top_brand_apstore（1）,u_pay_top_brand_google（1）,u_pay_top_brand_foodpanda（1）,u_pay_top_brand_deliveroo（1）,u_pay_top_brand_hktvmall（1）,i_discont_ratio（1）,i_discont_amt（1）,i_category_dl（1）,i_category_fb（1）,i_category_r（1）,i_category_o（1）,i_titleseg_eshop（1）,i_titleseg_goog（1）,i_titleseg_ytb（1）,i_titleseg_fp（1）,i_titleseg_hktvmall（1）,i_titleseg_steam（1）,i_titleseg_lol（1）,i_titleseg_hkcash（1）,i_titleseg_mycard（1）,i_titleseg_klook（1）,i_titleseg_paccoffee（1）,i_titleseg_taihing（1）,i_titleseg_bigolive（1）,i_titleseg_pubg（1）,i_titleseg_lookfantastic（1）,i_titleseg_sony（1）,i_titleseg_agoda（1）,i_titleseg_haagendazs（1）,i_titleseg_kkday（1）,i_titleseg_iherb（1）,i_titleseg_viu（1）,i_titleseg_huawei（1）,i_titleseg_deliveroo（1）,i_titleseg_iqiyi（1）,i_titleseg_trip（1）,i_titleseg_mcdonald（1）,i_titleseg_lalamove（1）,i_titleseg_hmvod（1）,i_titleseg_joox（1）,i_titleseg_minecraft（1）,i_titleseg_nintendo（1）,i_titleseg_playstation（1）,i_titleseg_razer（1）,i_titleseg_spotify（1）,i_titleseg_rentacar（1）,i_titleseg_xbox（1）,i_titleseg_suchprice（1）,u_ares_trd_cnt_r180d（1）,u_ares_trd_cnt_r90d（1）,u_ares_trd_cnt_r30d（1）,u_ares_trd_cnt_r7d（1）,u_ares_google_trd_cnt_r90d（1）,u_ares_google_trd_cnt_r30d（1）,u_ares_aprw_trd_cnt_r90d（1）,u_ares_aprw_trd_cnt_r30d（1）,u_ares_cytop_trd_cnt_r90d（1）,u_ares_cytop_trd_cnt_r30d（1）,u_ares_xsq_trd_rt_r90d（1）,u_ares_catdl_trd_rt_r90d（1）,u_ares_catfb_trd_rt_r90d（1）,u_ares_google_trd_rt_r90d（1）,u_ares_google_trd_rt_r30d（1）,u_ares_google_trd_rt_r7d（1）,u_ares_aprw_trd_rt_r90d（1）,u_ares_aprw_trd_rt_r30d（1）,u_ares_aprw_trd_rt_r7d（1）,u_ares_cytop_trd_rt_r90d（1）,u_ares_cytop_trd_rt_r30d（1）,u_ares_cytop_trd_rt_r7d（1）,u_ares_foodpanda_trd_rt_r30d（1）,u_ares_deliveroo_trd_rt_r30d（1）,label（1）\\\",\\\"parties\\\":{\\\"alice-becb78736f69468389f4059ee57a19b9\\\":{\\\"feature_names\\\":[]}},\\\"selectFeatures\\\":\\\"gn_user_id\\\",\\\"id_fields\\\":{\\\"5d1ebfda691d470e8b9437d70fba67de\\\":[{\\\"associatedKey0\\\":\\\"gn_user_id（1）\\\"}]},\\\"sampleTables\\\":[{\\\"nodeId\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"tableName\\\":\\\"ap_data\\\",\\\"schemas\\\":\\\"gn_user_id,site_user_id_ap,item_id_ap,feature_dt_ap,u_first_exp_today,u_last_exp_today,u_first_clk_today,u_last_clk_today,u_exp_cnt_r1d,u_exp_cnt_r7d,u_exp_cnt_r14d,u_exp_cnt_r30d,u_exp_cnt_r90d,u_exp_day_r7d,u_exp_day_r30d,u_exp_day_r90d,u_clk_cnt_r1d,u_clk_cnt_r7d,u_clk_cnt_r14d,u_clk_cnt_r30d,u_clk_cnt_r90d,u_clk_day_r7d,u_clk_day_r30d,u_clk_day_r90d,u_trd_cnt_r1d,u_trd_cnt_r7d,u_trd_cnt_r14d,u_trd_cnt_r30d,u_trd_cnt_r90d,u_ctr_r1d,u_ctr_r7d,u_ctr_r14d,u_ctr_r30d,u_ctr_r90d,u_cvr_r1d,u_cvr_r7d,u_cvr_r14d,u_cvr_r30d,u_cvr_r90d,u_expo_cvr_r1d,u_expo_cvr_r7d,u_expo_cvr_r14d,u_expo_cvr_r30d,u_expo_cvr_r90d,u_expo_old_r30d,u_expo_ind_old_r30d,u_clk_old_r30d,u_trade_old_r30d,u_gift_sensitive_score,u_redpacket_sensitive_score,u_prefer_industry_shopping,u_prefer_industry_game,u_prefer_industry_videomusic,u_prefer_industry_food,u_prefer_industry_sport,u_prefer_industry_telecom,u_prefer_industry_trip,u_prefer_industry_digital,u_voucher_send_cnt_r1d,u_voucher_use_cnt_r1d,u_voucher_decrease_amt_r1d,u_voucher_use_rate_r1d,u_voucher_send_cnt_r7d,u_voucher_use_cnt_r7d,u_voucher_decrease_amt_r7d,u_voucher_use_rate_r7d,u_voucher_send_cnt_r30d,u_voucher_use_cnt_r30d,u_voucher_decrease_amt_r30d,u_voucher_use_rate_r30d,u2i_exp_cnt_r7d,u2i_exp_cnt_r30d,u2i_exp_cnt_r90d,u2i_clk_cnt_r7d,u2i_clk_cnt_r30d,u2i_clk_cnt_r90d,u2i_trd_cnt_r7d,u2i_trd_cnt_r30d,u2i_trd_cnt_r90d,u2i_ctr_r7d,u2i_ctr_r30d,u2i_ctr_r90d,u2i_cvr_r7d,u2i_cvr_r30d,u2i_cvr_r90d,u2i_expo_cvr_r7d,u2i_expo_cvr_r30d,u2i_expo_cvr_r90d,u2i_c_exp_cnt_r7d,u2i_c_exp_cnt_r30d,u2i_c_exp_cnt_r90d,u2i_c_clk_cnt_r7d,u2i_c_clk_cnt_r30d,u2i_c_clk_cnt_r90d,u2i_c_trd_cnt_r7d,u2i_c_trd_cnt_r30d,u2i_c_trd_cnt_r90d,u2i_c_ctr_r7d,u2i_c_ctr_r30d,u2i_c_ctr_r90d,u2i_c_cvr_r7d,u2i_c_cvr_r30d,u2i_c_cvr_r90d,u2i_c_expo_cvr_r7d,u2i_c_expo_cvr_r30d,u2i_c_expo_cvr_r90d,u2i_b_exp_cnt_r7d,u2i_b_exp_cnt_r30d,u2i_b_exp_cnt_r90d,u2i_b_clk_cnt_r7d,u2i_b_clk_cnt_r30d,u2i_b_clk_cnt_r90d,u2i_b_trd_cnt_r7d,u2i_b_trd_cnt_r30d,u2i_b_trd_cnt_r90d,u2i_b_ctr_r7d,u2i_b_ctr_r30d,u2i_b_ctr_r90d,u2i_b_cvr_r7d,u2i_b_cvr_r30d,u2i_b_cvr_r90d,u2i_b_expo_cvr_r7d,u2i_b_expo_cvr_r30d,u2i_b_expo_cvr_r90d,i_stock_cnt,i_sale_cnt,i_exp_cnt_r1d,i_exp_cnt_r7d,i_exp_cnt_r14d,i_exp_cnt_r30d,i_exp_cnt_r90d,i_clk_cnt_r1d,i_clk_cnt_r7d,i_clk_cnt_r14d,i_clk_cnt_r30d,i_clk_cnt_r90d,i_trd_cnt_r1d,i_trd_cnt_r7d,i_trd_cnt_r14d,i_trd_cnt_r30d,i_trd_cnt_r90d,i_ctr_r1d,i_ctr_r7d,i_ctr_r14d,i_ctr_r30d,i_ctr_r90d,i_cvr_r1d,i_cvr_r7d,i_cvr_r14d,i_cvr_r30d,i_cvr_r90d,i_expo_cvr_r1d,i_expo_cvr_r7d,i_expo_cvr_r14d,i_expo_cvr_r30d,i_expo_cvr_r90d,i_c_clk_cnt_r7d,i_c_clk_cnt_r30d,i_c_clk_cnt_r90d,i_c_trd_cnt_r7d,i_c_trd_cnt_r30d,i_c_trd_cnt_r90d,i_c_ctr_r7d,i_c_ctr_r30d,i_c_ctr_r90d,i_c_expo_cvr_r7d,i_c_expo_cvr_r30d,i_c_expo_cvr_r90d,i_b_clk_cnt_r7d,i_b_clk_cnt_r30d,i_b_clk_cnt_r90d,i_b_trd_cnt_r7d,i_b_trd_cnt_r30d,i_b_trd_cnt_r90d,i_b_ctr_r7d,i_b_ctr_r30d,i_b_ctr_r90d,i_b_expo_cvr_r7d,i_b_expo_cvr_r30d,i_b_expo_cvr_r90d,u_group_general_act_high,u_group_general_act_mid,u_group_general_act_low,u_group_general_ind_yx,u_group_general_ind_yy,u_group_general_ind_ms,u_group_general_ind_gw,u_group_general_ind_ty,u_group_general_ind_u,u_pay_top_category_cat_dl,u_pay_top_category_cat_fb,u_pay_top_category_cat_r,u_pay_top_category_cat_o,u_pay_top_category_catcnt,u_pay_top_category_top1_dl,u_pay_top_category_top1_fb,u_pay_top_category_top1_r,u_pay_top_category_top1_o,u_pay_top_brand_apstore,u_pay_top_brand_google,u_pay_top_brand_foodpanda,u_pay_top_brand_deliveroo,u_pay_top_brand_hktvmall,i_discont_ratio,i_discont_amt,i_category_dl,i_category_fb,i_category_r,i_category_o,i_titleseg_eshop,i_titleseg_goog,i_titleseg_ytb,i_titleseg_fp,i_titleseg_hktvmall,i_titleseg_steam,i_titleseg_lol,i_titleseg_hkcash,i_titleseg_mycard,i_titleseg_klook,i_titleseg_paccoffee,i_titleseg_taihing,i_titleseg_bigolive,i_titleseg_pubg,i_titleseg_lookfantastic,i_titleseg_sony,i_titleseg_agoda,i_titleseg_haagendazs,i_titleseg_kkday,i_titleseg_iherb,i_titleseg_viu,i_titleseg_huawei,i_titleseg_deliveroo,i_titleseg_iqiyi,i_titleseg_trip,i_titleseg_mcdonald,i_titleseg_lalamove,i_titleseg_hmvod,i_titleseg_joox,i_titleseg_minecraft,i_titleseg_nintendo,i_titleseg_playstation,i_titleseg_razer,i_titleseg_spotify,i_titleseg_rentacar,i_titleseg_xbox,i_titleseg_suchprice,u_ares_trd_cnt_r180d,u_ares_trd_cnt_r90d,u_ares_trd_cnt_r30d,u_ares_trd_cnt_r7d,u_ares_google_trd_cnt_r90d,u_ares_google_trd_cnt_r30d,u_ares_aprw_trd_cnt_r90d,u_ares_aprw_trd_cnt_r30d,u_ares_cytop_trd_cnt_r90d,u_ares_cytop_trd_cnt_r30d,u_ares_xsq_trd_rt_r90d,u_ares_catdl_trd_rt_r90d,u_ares_catfb_trd_rt_r90d,u_ares_google_trd_rt_r90d,u_ares_google_trd_rt_r30d,u_ares_google_trd_rt_r7d,u_ares_aprw_trd_rt_r90d,u_ares_aprw_trd_rt_r30d,u_ares_aprw_trd_rt_r7d,u_ares_cytop_trd_rt_r90d,u_ares_cytop_trd_rt_r30d,u_ares_cytop_trd_rt_r7d,u_ares_foodpanda_trd_rt_r30d,u_ares_deliveroo_trd_rt_r30d,label\\\",\\\"groupKeys\\\":\\\"\\\",\\\"schemaTypes\\\":\\\"string,string,string,string,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double\\\",\\\"associatedKeys\\\":\\\"gn_user_id,site_user_id_ap,item_id_ap,feature_dt_ap\\\",\\\"sampleTable\\\":\\\"5d1ebfda691d470e8b9437d70fba67de\\\"},{\\\"nodeId\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"tableName\\\":\\\"ap_data\\\",\\\"schemas\\\":\\\"gn_user_id（1）,site_user_id_ap（1）,item_id_ap（1）,feature_dt_ap（1）,u_first_exp_today（1）,u_last_exp_today（1）,u_first_clk_today（1）,u_last_clk_today（1）,u_exp_cnt_r1d（1）,u_exp_cnt_r7d（1）,u_exp_cnt_r14d（1）,u_exp_cnt_r30d（1）,u_exp_cnt_r90d（1）,u_exp_day_r7d（1）,u_exp_day_r30d（1）,u_exp_day_r90d（1）,u_clk_cnt_r1d（1）,u_clk_cnt_r7d（1）,u_clk_cnt_r14d（1）,u_clk_cnt_r30d（1）,u_clk_cnt_r90d（1）,u_clk_day_r7d（1）,u_clk_day_r30d（1）,u_clk_day_r90d（1）,u_trd_cnt_r1d（1）,u_trd_cnt_r7d（1）,u_trd_cnt_r14d（1）,u_trd_cnt_r30d（1）,u_trd_cnt_r90d（1）,u_ctr_r1d（1）,u_ctr_r7d（1）,u_ctr_r14d（1）,u_ctr_r30d（1）,u_ctr_r90d（1）,u_cvr_r1d（1）,u_cvr_r7d（1）,u_cvr_r14d（1）,u_cvr_r30d（1）,u_cvr_r90d（1）,u_expo_cvr_r1d（1）,u_expo_cvr_r7d（1）,u_expo_cvr_r14d（1）,u_expo_cvr_r30d（1）,u_expo_cvr_r90d（1）,u_expo_old_r30d（1）,u_expo_ind_old_r30d（1）,u_clk_old_r30d（1）,u_trade_old_r30d（1）,u_gift_sensitive_score（1）,u_redpacket_sensitive_score（1）,u_prefer_industry_shopping（1）,u_prefer_industry_game（1）,u_prefer_industry_videomusic（1）,u_prefer_industry_food（1）,u_prefer_industry_sport（1）,u_prefer_industry_telecom（1）,u_prefer_industry_trip（1）,u_prefer_industry_digital（1）,u_voucher_send_cnt_r1d（1）,u_voucher_use_cnt_r1d（1）,u_voucher_decrease_amt_r1d（1）,u_voucher_use_rate_r1d（1）,u_voucher_send_cnt_r7d（1）,u_voucher_use_cnt_r7d（1）,u_voucher_decrease_amt_r7d（1）,u_voucher_use_rate_r7d（1）,u_voucher_send_cnt_r30d（1）,u_voucher_use_cnt_r30d（1）,u_voucher_decrease_amt_r30d（1）,u_voucher_use_rate_r30d（1）,u2i_exp_cnt_r7d（1）,u2i_exp_cnt_r30d（1）,u2i_exp_cnt_r90d（1）,u2i_clk_cnt_r7d（1）,u2i_clk_cnt_r30d（1）,u2i_clk_cnt_r90d（1）,u2i_trd_cnt_r7d（1）,u2i_trd_cnt_r30d（1）,u2i_trd_cnt_r90d（1）,u2i_ctr_r7d（1）,u2i_ctr_r30d（1）,u2i_ctr_r90d（1）,u2i_cvr_r7d（1）,u2i_cvr_r30d（1）,u2i_cvr_r90d（1）,u2i_expo_cvr_r7d（1）,u2i_expo_cvr_r30d（1）,u2i_expo_cvr_r90d（1）,u2i_c_exp_cnt_r7d（1）,u2i_c_exp_cnt_r30d（1）,u2i_c_exp_cnt_r90d（1）,u2i_c_clk_cnt_r7d（1）,u2i_c_clk_cnt_r30d（1）,u2i_c_clk_cnt_r90d（1）,u2i_c_trd_cnt_r7d（1）,u2i_c_trd_cnt_r30d（1）,u2i_c_trd_cnt_r90d（1）,u2i_c_ctr_r7d（1）,u2i_c_ctr_r30d（1）,u2i_c_ctr_r90d（1）,u2i_c_cvr_r7d（1）,u2i_c_cvr_r30d（1）,u2i_c_cvr_r90d（1）,u2i_c_expo_cvr_r7d（1）,u2i_c_expo_cvr_r30d（1）,u2i_c_expo_cvr_r90d（1）,u2i_b_exp_cnt_r7d（1）,u2i_b_exp_cnt_r30d（1）,u2i_b_exp_cnt_r90d（1）,u2i_b_clk_cnt_r7d（1）,u2i_b_clk_cnt_r30d（1）,u2i_b_clk_cnt_r90d（1）,u2i_b_trd_cnt_r7d（1）,u2i_b_trd_cnt_r30d（1）,u2i_b_trd_cnt_r90d（1）,u2i_b_ctr_r7d（1）,u2i_b_ctr_r30d（1）,u2i_b_ctr_r90d（1）,u2i_b_cvr_r7d（1）,u2i_b_cvr_r30d（1）,u2i_b_cvr_r90d（1）,u2i_b_expo_cvr_r7d（1）,u2i_b_expo_cvr_r30d（1）,u2i_b_expo_cvr_r90d（1）,i_stock_cnt（1）,i_sale_cnt（1）,i_exp_cnt_r1d（1）,i_exp_cnt_r7d（1）,i_exp_cnt_r14d（1）,i_exp_cnt_r30d（1）,i_exp_cnt_r90d（1）,i_clk_cnt_r1d（1）,i_clk_cnt_r7d（1）,i_clk_cnt_r14d（1）,i_clk_cnt_r30d（1）,i_clk_cnt_r90d（1）,i_trd_cnt_r1d（1）,i_trd_cnt_r7d（1）,i_trd_cnt_r14d（1）,i_trd_cnt_r30d（1）,i_trd_cnt_r90d（1）,i_ctr_r1d（1）,i_ctr_r7d（1）,i_ctr_r14d（1）,i_ctr_r30d（1）,i_ctr_r90d（1）,i_cvr_r1d（1）,i_cvr_r7d（1）,i_cvr_r14d（1）,i_cvr_r30d（1）,i_cvr_r90d（1）,i_expo_cvr_r1d（1）,i_expo_cvr_r7d（1）,i_expo_cvr_r14d（1）,i_expo_cvr_r30d（1）,i_expo_cvr_r90d（1）,i_c_clk_cnt_r7d（1）,i_c_clk_cnt_r30d（1）,i_c_clk_cnt_r90d（1）,i_c_trd_cnt_r7d（1）,i_c_trd_cnt_r30d（1）,i_c_trd_cnt_r90d（1）,i_c_ctr_r7d（1）,i_c_ctr_r30d（1）,i_c_ctr_r90d（1）,i_c_expo_cvr_r7d（1）,i_c_expo_cvr_r30d（1）,i_c_expo_cvr_r90d（1）,i_b_clk_cnt_r7d（1）,i_b_clk_cnt_r30d（1）,i_b_clk_cnt_r90d（1）,i_b_trd_cnt_r7d（1）,i_b_trd_cnt_r30d（1）,i_b_trd_cnt_r90d（1）,i_b_ctr_r7d（1）,i_b_ctr_r30d（1）,i_b_ctr_r90d（1）,i_b_expo_cvr_r7d（1）,i_b_expo_cvr_r30d（1）,i_b_expo_cvr_r90d（1）,u_group_general_act_high（1）,u_group_general_act_mid（1）,u_group_general_act_low（1）,u_group_general_ind_yx（1）,u_group_general_ind_yy（1）,u_group_general_ind_ms（1）,u_group_general_ind_gw（1）,u_group_general_ind_ty（1）,u_group_general_ind_u（1）,u_pay_top_category_cat_dl（1）,u_pay_top_category_cat_fb（1）,u_pay_top_category_cat_r（1）,u_pay_top_category_cat_o（1）,u_pay_top_category_catcnt（1）,u_pay_top_category_top1_dl（1）,u_pay_top_category_top1_fb（1）,u_pay_top_category_top1_r（1）,u_pay_top_category_top1_o（1）,u_pay_top_brand_apstore（1）,u_pay_top_brand_google（1）,u_pay_top_brand_foodpanda（1）,u_pay_top_brand_deliveroo（1）,u_pay_top_brand_hktvmall（1）,i_discont_ratio（1）,i_discont_amt（1）,i_category_dl（1）,i_category_fb（1）,i_category_r（1）,i_category_o（1）,i_titleseg_eshop（1）,i_titleseg_goog（1）,i_titleseg_ytb（1）,i_titleseg_fp（1）,i_titleseg_hktvmall（1）,i_titleseg_steam（1）,i_titleseg_lol（1）,i_titleseg_hkcash（1）,i_titleseg_mycard（1）,i_titleseg_klook（1）,i_titleseg_paccoffee（1）,i_titleseg_taihing（1）,i_titleseg_bigolive（1）,i_titleseg_pubg（1）,i_titleseg_lookfantastic（1）,i_titleseg_sony（1）,i_titleseg_agoda（1）,i_titleseg_haagendazs（1）,i_titleseg_kkday（1）,i_titleseg_iherb（1）,i_titleseg_viu（1）,i_titleseg_huawei（1）,i_titleseg_deliveroo（1）,i_titleseg_iqiyi（1）,i_titleseg_trip（1）,i_titleseg_mcdonald（1）,i_titleseg_lalamove（1）,i_titleseg_hmvod（1）,i_titleseg_joox（1）,i_titleseg_minecraft（1）,i_titleseg_nintendo（1）,i_titleseg_playstation（1）,i_titleseg_razer（1）,i_titleseg_spotify（1）,i_titleseg_rentacar（1）,i_titleseg_xbox（1）,i_titleseg_suchprice（1）,u_ares_trd_cnt_r180d（1）,u_ares_trd_cnt_r90d（1）,u_ares_trd_cnt_r30d（1）,u_ares_trd_cnt_r7d（1）,u_ares_google_trd_cnt_r90d（1）,u_ares_google_trd_cnt_r30d（1）,u_ares_aprw_trd_cnt_r90d（1）,u_ares_aprw_trd_cnt_r30d（1）,u_ares_cytop_trd_cnt_r90d（1）,u_ares_cytop_trd_cnt_r30d（1）,u_ares_xsq_trd_rt_r90d（1）,u_ares_catdl_trd_rt_r90d（1）,u_ares_catfb_trd_rt_r90d（1）,u_ares_google_trd_rt_r90d（1）,u_ares_google_trd_rt_r30d（1）,u_ares_google_trd_rt_r7d（1）,u_ares_aprw_trd_rt_r90d（1）,u_ares_aprw_trd_rt_r30d（1）,u_ares_aprw_trd_rt_r7d（1）,u_ares_cytop_trd_rt_r90d（1）,u_ares_cytop_trd_rt_r30d（1）,u_ares_cytop_trd_rt_r7d（1）,u_ares_foodpanda_trd_rt_r30d（1）,u_ares_deliveroo_trd_rt_r30d（1）,label（1）\\\",\\\"groupKeys\\\":\\\"\\\",\\\"schemaTypes\\\":\\\"string,string,string,string,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double\\\",\\\"associatedKeys\\\":\\\"gn_user_id（1）,site_user_id_ap（1）,item_id_ap（1）,feature_dt_ap（1）\\\",\\\"sampleTable\\\":\\\"5d1ebfda691d470e8b9437d70fba67de\\\"}],\\\"result_address\\\":[{\\\"ds_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\\\",\\\"disabledPath\\\":\\\"dev/alice/gjyxdata\\\",\\\"node_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"date\\\":\\\"${yyyymmdd}\\\",\\\"operator\\\":\\\"-\\\",\\\"partition_by\\\":0},{\\\"ds_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab\\\",\\\"disabledPath\\\":\\\"dev/alice/gjyxdata\\\",\\\"node_id\\\":\\\"alice-becb78736f69468389f4059ee57a19b9\\\",\\\"date\\\":\\\"${yyyymmdd}\\\",\\\"operator\\\":\\\"-\\\",\\\"partition_by\\\":0}]}\",\"status\":0,\"is_periodic\":false}"
+      "gmt_create": 1680071876,
+      "path": "./",
+      "name": "http_alice_test_jupiter3",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1680072055,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:7d91ea297697471eb93e522c873d5e9e",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
     },
     {
-      "job_id": "op-table-statistics-51b3383acb524f488628",
-      "dependencies": [
-        "op-psi-v3-fe0e621be7364213b75ed322b0219b"
-      ],
-      "parties": [
-        {
-          "domain_id": "alice-becb78736f69468389f4059ee57a19b9",
-          "role": null,
-          "version": null
-        }
-      ],
-      "op_type": "OP_TABLE_STATISTICS",
-      "op_body": "{\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{\"in_path\":\"dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/psi1686561412194_20230616152618_708\"}}}",
-      "app": "mpc_trainer",
-      "central_domain": null,
-      "component": "{\"virtual\":false,\"component_id\":\"jvwimlfs_node_4\",\"job_id\":null,\"code_name\":\"OPERATOR_TABLE_STATISTIC\",\"name\":\"全表统计\",\"namespace\":\"Ant\",\"op\":\"OP_TABLE_STATISTICS\",\"dependencies\":[\"jvwimlfs_node_3\"],\"params\":{\"input_slots\":[{\"related_id\":\"jvwimlfs_node_3_output_1\",\"table_id\":null,\"sequence\":1,\"name\":null,\"type\":null,\"parties\":null}],\"output_slots\":[{\"id\":\"jvwimlfs_node_4_output_1\",\"name\":\"\",\"type\":\"report\",\"ref_id\":null,\"ext_info\":null}],\"parties\":{\"alice-becb78736f69468389f4059ee57a19b9\":{}},\"hyper_params\":{},\"extra_params\":{}},\"extra\":\"{\\\"x\\\":217.5,\\\"y\\\":335,\\\"union_type\\\":\\\"axis1\\\",\\\"featureNames\\\":\\\"gn_user_id\\\"}\",\"status\":0,\"is_periodic\":false}"
+      "gmt_create": 1679638196,
+      "path": "./",
+      "name": "http_alice_jupiter2",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1679638373,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:a2dcbd0b363b4f81a40621a1681ac98a",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1678438570,
+      "path": "dev/bob/国际",
+      "name": "bob0310",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217672,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:341c5bcf949b4d589342c7484a190bf2",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1678090702,
+      "path": "yuefan",
+      "name": "OssScql",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1678090846,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:f8a86e244dea40ed891e87a5050dc5f9",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1675762207,
+      "path": "dev/alice/0207test/",
+      "name": "oss_0207",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217621,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:c195e92cb4974fd0a1425a8600dfea3c",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1675754582,
+      "path": "dev/alice/maxpt/",
+      "name": "OssPredict",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217573,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:0bc7e373edc24949b86aec250cb77a09",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1675321955,
+      "path": "dev/alice/jy/",
+      "name": "OssPredict",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217525,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:73d158c3ddd44c138035b8d2c9cfc6ff",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1671624444,
+      "path": "dev/alice/oss_1108",
+      "name": "oss_1108",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217455,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:907840b6ad51400ab400db995c2bc334",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1671617626,
+      "path": "dev/alice/gjyxbigdata",
+      "name": "gjyxbigDataOss",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217331,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:e698dc9af7e44bd7b7518f59c89603aa",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1670986321,
+      "path": "dev/alice/yonglangdata",
+      "name": "YonglangOss",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217274,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:ed017f4d34d843a683fb4ace474ba3c8",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1670846849,
+      "path": "./",
+      "name": "ant",
+      "inst_name": "alice-jamey",
+      "type": "MySQL",
+      "gmt_modified": 1670847021,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:8d7626baa71d46e883ea48d214de6c5f",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1670054860,
+      "path": "./",
+      "name": "aplus_http_fs_service",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1670055012,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:65dcc70aa005421cbf9145a51316ab88",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669962599,
+      "path": "./",
+      "name": "aplus_http_fs_service",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1669962747,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:3fd7b42e612c4dd7882d14bbdbf11c57",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669945374,
+      "path": "dev/alice/DNN",
+      "name": "AliceDNN",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217223,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:bd21d26a7b3d4da58e41db25a7451a2b",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669778407,
+      "path": "./",
+      "name": "aplus_http_fs_service",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1669778523,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:fb0eda960db74a608f3e76f2938549bb",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669711537,
+      "path": "dev/alice/zzl1129",
+      "name": "AliceDNN",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217162,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:1f1c2c48b0284fb3bdf5969a14567c18",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669710566,
+      "path": "./",
+      "name": "wzz_http_1027",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1669710685,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:8cc9e4d96af0438a9b54816b57ec21fa",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669710137,
+      "path": "./",
+      "name": "wzz_http_1027",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1669710320,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:d9e3fae0781e4b46bd28ddd05a30f471",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669625730,
+      "path": "dev/alice/cepingOss1128",
+      "name": "cepingOss1128",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217100,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:576e6f45d79a43bb98cd567726487536",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669346079,
+      "path": "./",
+      "name": "cepingLocal",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1669346200,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:10b100c6a5094fbebac8be2bf53037df",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669345133,
+      "path": "dev/alice/cepingOss",
+      "name": "cepingOss",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682217040,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:5bdc067dcb6642e98f5b98657f3182fa",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669279798,
+      "path": "./",
+      "name": "aplus_http_fs_service",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1669279982,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:1e27d22884664e469130f19482fbb4c6",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669086061,
+      "path": "./",
+      "name": "zzldata",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1669086185,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:8bdb313b09d749f594534d99795988bf",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669015298,
+      "path": "./",
+      "name": "aliceData1121",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1669015503,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:3c5bb37b84914d5088b684c1a8722c88",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1669014757,
+      "path": "./",
+      "name": "aliceData1121",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1669014905,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:ed41ab17c2cd4243ac4c5c0e8ef0d306",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1668758082,
+      "path": "./",
+      "name": "http_alice",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1679638094,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:4076519192fb4fd082e99ee79ceb2d98",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1668507899,
+      "path": "dev/alice/gjyxdata",
+      "name": "guojiyingxiaotest",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682216984,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1667901461,
+      "path": "dev/alice/oss_1108",
+      "name": "oss_1108",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682216709,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:d02aaa0958034a73a27654a674e8f366",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1667901362,
+      "path": "./",
+      "name": "AliceData1108",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1668505748,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:8e8f4248b9b049aaba710dd5c083863c",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1666936501,
+      "path": "./",
+      "name": "test",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1666936612,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:4b3c5f3f68f34440b08b37a476a7dfde",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1666838060,
+      "path": "./",
+      "name": "wzz_http_1027",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1666838170,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:1de6a271bbba4819ac37f152bffa8f17",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1666837138,
+      "path": "dev/alice/wzz_oss",
+      "name": "wzz_oss_1027",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682216659,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:199079eb9a09405ab025062ad90e6eb3",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1666767297,
+      "path": "./",
+      "name": "AliceData1026",
+      "inst_name": "alice-jamey",
+      "type": "localPath",
+      "gmt_modified": 1666767433,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:c2578cd3d97641b99c74de6e7b539219",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1666598524,
+      "path": "dev/alice/data",
+      "name": "zzltest",
+      "inst_name": "alice-jamey",
+      "type": "Oss",
+      "gmt_modified": 1682216590,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:172024cd7fc5469c9ab87f5d6ba66cff",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1666063369,
+      "path": "./",
+      "name": "yuanshuiDataSet",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1666063498,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:ffa9b4e5bb60444b830c7ea2562f710f",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1665408768,
+      "path": "./",
+      "name": "wzj",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1665408897,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:003b5e1456b64a7fb8836e7503c77119",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1665219300,
+      "path": "./",
+      "name": "AliceData1008",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1665219451,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:97f4865b42af418d9d88d3269e70c321",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1664420189,
+      "path": "./",
+      "name": "httpData",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1664420307,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:4d4add450a7e4289a49789eb52bf8be1",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1664272109,
+      "path": "./",
+      "name": "llsk",
+      "inst_name": "alice-jamey",
+      "type": "MySQL",
+      "gmt_modified": 1664272109,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:981e13188761465ca39d2a80ec90d4f0",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Loss"
+    },
+    {
+      "gmt_create": 1664197696,
+      "path": "./",
+      "name": "http123",
+      "inst_name": "alice-jamey",
+      "type": "Http",
+      "gmt_modified": 1664197804,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:693e9e8d1a1f4c74907f1bb8c4628cf9",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1661492960,
+      "path": "./",
+      "name": "TestData",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1661493077,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:9d450a87dea949e8a337e7f59b90d0b2",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1661133238,
+      "path": "./",
+      "name": "LongDataalices",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1661133416,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:4647a6cad8ae45ba9c544288c84f23bb",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1661132258,
+      "path": "./",
+      "name": "LongDataalice",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1661132422,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:3f9b47ef36254b6bbcc2e9bea741bc21",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1660902689,
+      "path": "./",
+      "name": "DataAlice",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1660902788,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:c476de7604c6414da7f61367a070490f",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1660276075,
+      "path": "./",
+      "name": "MaoyanDataSet",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1660276169,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:83ccd10d8a6548b59d87e8a2e9b650e5",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1660269852,
+      "path": "./",
+      "name": "MaoyanDataSet",
+      "inst_name": "alice-jamey",
+      "type": "LocalPath",
+      "gmt_modified": 1660269989,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:7254c8909fc7487fb305c1e44d14e905",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1660209379,
+      "path": "./",
+      "name": "isv",
+      "inst_name": "alice-jamey",
+      "type": "MySQL",
+      "gmt_modified": 1660209504,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:5602408fe04a4983bd56395892812be3",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
+    },
+    {
+      "gmt_create": 1660208494,
+      "path": "./",
+      "name": "hospital",
+      "inst_name": "alice-jamey",
+      "type": "MySQL",
+      "gmt_modified": 1660208602,
+      "ds_id": "alice-becb78736f69468389f4059ee57a19b9:77870762d23c4cc3998eaea8eb9ef409",
+      "node_id": "alice-becb78736f69468389f4059ee57a19b9",
+      "status": "Connected"
     }
   ],
-  "generateId": null
+  "detail": null,
+  "trace_id": null
 }

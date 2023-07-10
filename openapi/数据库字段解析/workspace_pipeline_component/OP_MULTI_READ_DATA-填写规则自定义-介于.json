@@ -1,0 +1,45 @@
+{
+  "input_slots": [],
+  "output_slots": [
+    {
+      "id": "xy3y7vck_node_1_output_1",
+      "name": "",
+      "type": "datatable",
+      "ref_id": null,
+      "ext_info": null
+    }
+  ],
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "time_zone": "GMT+08:00",
+      "partition_by": "(20230509,20230515)"
+    }
+  },
+  "hyper_params": {
+    "table_id": "24948a613c8f46a389237ff9ad3bf787",
+    "partition_by": {
+      "left": "20230509",
+      "right": "20230515"
+    },
+    "bizdate_type": "custom",
+    "nodeId": "alice-becb78736f69468389f4059ee57a19b9",
+    "schemas": "",
+    "schemaTypes": "",
+    "associatedKeys": "",
+    "is_partition": true,
+    "rule_type": "${yyyymmdd}",
+    "custom_type": "between",
+    "op_type": "OP_READ_DATA",
+    "left_equal": "(",
+    "left": "20230509",
+    "right": "20230515",
+    "right_equal": ")",
+    "parties": {
+      "alice-becb78736f69468389f4059ee57a19b9": {
+        "time_zone": "GMT+08:00",
+        "partition_by": "(20230509,20230515)"
+      }
+    }
+  },
+  "extra_params": {}
+}

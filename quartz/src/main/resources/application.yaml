@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: OpenApi
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/openapi_test?serverTimezone=GMT%2B8
+    username: root
+    password: password
+    hikari:
+      idle-timeout: 60000
+      maximum-pool-size: 20
+      connection-timeout: 5000
+  quartz:
+    # 将任务等保存化到数据库
+    job-store-type: jdbc
+    scheduler-name: predict-scheduler
+    # 程序结束时会等待quartz相关的内容结束
+    wait-for-jobs-to-complete-on-shutdown: true
+    jdbc:
+      initialize-schema: never
+    properties:
+      org:
+        quartz:
+          jobStore:
+            dataSource: quartzDataSource
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            # 表示数据库中相关表是QRTZ_开头的
+            tablePrefix: QRTZ_
+            isClustered: true
+            clusterCheckinInterval: 1000
+            useProperties: false
+          threadPool:
+            # 线程数
+            threadCount: 25
+            # 线程优先级
+            threadPriority: 5
+            class: org.quartz.simpl.SimpleThreadPool
+  jackson:
+    deserialization:
+      fail-on-missing-external-type-id-property: false
+      fail-on-ignored-properties: false
+      fail-on-unknown-properties: false

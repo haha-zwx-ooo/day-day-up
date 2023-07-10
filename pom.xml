@@ -19,6 +19,11 @@
         <module>mybatis</module>
         <module>utils</module>
         <module>specification</module>
+        <module>only-test</module>
+        <module>file</module>
+        <module>openapi</module>
+        <module>quartz</module>
+        <module>git</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

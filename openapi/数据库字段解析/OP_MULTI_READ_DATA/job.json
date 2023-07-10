@@ -1,0 +1,46 @@
+{
+  "input_slots": [],
+  "output_slots": [
+    {
+      "id": "xy3y7vck_node_1_output_1_20230705171652_306",
+      "name": "",
+      "type": "virtualtable",
+      "ref_id": "xy3y7vck_node_1_output_1_20230705171652_306",
+      "ext_info": null
+    }
+  ],
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "output_path": "dmdt://alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab/xy3y7vck_node_1_output_1_20230705171652_306@data/xy3y7vck/read_table/node_1_output_1_20230705171652_306/20230510/xy3y7vck_node_1_output_1_20230705171652_306",
+      "time_zone": "GMT+08:00",
+      "partition_by": "(20230508,20230511)"
+    }
+  },
+  "hyper_params": {
+    "bizdate_type": "custom",
+    "custom_type": "between",
+    "is_partition": true,
+    "right": "20230511",
+    "table_id": "24948a613c8f46a389237ff9ad3bf787",
+    "associatedKeys": "",
+    "partition_by": {
+      "left": "20230508",
+      "right": "20230511"
+    },
+    "rule_type": "${yyyymmdd}",
+    "schemaTypes": "",
+    "left": "20230508",
+    "schemas": "",
+    "parties": {
+      "alice-becb78736f69468389f4059ee57a19b9": {
+        "partition_by": "20230509,20230510",
+        "time_zone": "GMT+08:00"
+      }
+    },
+    "left_equal": "(",
+    "op_type": "OP_READ_DATA",
+    "right_equal": ")",
+    "nodeId": "alice-becb78736f69468389f4059ee57a19b9"
+  },
+  "extra_params": {}
+}

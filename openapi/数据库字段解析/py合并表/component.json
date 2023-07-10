@@ -1,0 +1,59 @@
+{
+  "virtual": false,
+  "dependencyReplica": null,
+  "component_id": "xy3y7vck_node_1",
+  "job_id": null,
+  "code_name": "OPERATOR_READ_SAMPLE_TABLE",
+  "name": "读样本表",
+  "namespace": "Ant",
+  "op": "OP_MULTI_READ_DATA",
+  "dependencies": null,
+  "params": {
+    "input_slots": [],
+    "output_slots": [
+      {
+        "id": "xy3y7vck_node_1_output_1",
+        "name": "",
+        "type": "datatable",
+        "ref_id": null,
+        "ext_info": null
+      }
+    ],
+    "parties": {
+      "alice-becb78736f69468389f4059ee57a19b9": {
+        "time_zone": "GMT+08:00",
+        "partition_by": "(20230508,20230511)"
+      }
+    },
+    "hyper_params": {
+      "table_id": "24948a613c8f46a389237ff9ad3bf787",
+      "partition_by": {
+        "left": "20230508",
+        "right": "20230511"
+      },
+      "bizdate_type": "custom",
+      "nodeId": "alice-becb78736f69468389f4059ee57a19b9",
+      "schemas": "",
+      "schemaTypes": "",
+      "associatedKeys": "",
+      "is_partition": true,
+      "rule_type": "${yyyymmdd}",
+      "custom_type": "between",
+      "op_type": "OP_READ_DATA",
+      "left_equal": "(",
+      "left": "20230508",
+      "right": "20230511",
+      "right_equal": ")",
+      "parties": {
+        "alice-becb78736f69468389f4059ee57a19b9": {
+          "time_zone": "GMT+08:00",
+          "partition_by": "(20230508,20230511)"
+        }
+      }
+    },
+    "extra_params": {}
+  },
+  "extra": "{\"x\":105,\"y\":53,\"featureNames\":\"\",\"op_type\":\"OP_MULTI_READ_DATA\"}",
+  "status": 0,
+  "is_periodic": true
+}

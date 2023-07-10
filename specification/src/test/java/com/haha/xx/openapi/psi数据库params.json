@@ -1,0 +1,72 @@
+{
+  "input_slots": [
+    {
+      "related_id": "jvwimlfs_node_1_output_1_20230620110907_463",
+      "table_id": null,
+      "sequence": 1,
+      "name": null,
+      "type": null,
+      "parties": null
+    },
+    {
+      "related_id": "jvwimlfs_node_2_output_1_20230620110907_463",
+      "table_id": null,
+      "sequence": 2,
+      "name": null,
+      "type": null,
+      "parties": null
+    }
+  ],
+  "output_slots": [
+    {
+      "id": "jvwimlfs_node_3_output_1_20230620110907_463",
+      "name": "psi1686561412194_20230620110907_463",
+      "type": "virtualtable",
+      "ref_id": null,
+      "ext_info": null
+    }
+  ],
+  "parties": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "id_fields": [
+        "id1"
+      ]
+    }
+  },
+  "hyper_params": {
+    "no_precheck": false,
+    "psi_protocol": "ecdh",
+    "num_bins": 64,
+    "should_sort": false,
+    "parties": {
+      "alice-becb78736f69468389f4059ee57a19b9": {
+        "ds_id": "alice-becb78736f69468389f4059ee57a19b9:29c055297d3a4faa91ba89493d61acab",
+        "path": "",
+        "partition_by": "${yyyymmdd}-0",
+        "time_zone": "GMT+08:00"
+      }
+    }
+  },
+  "extra_params": {
+    "alice-becb78736f69468389f4059ee57a19b9": {
+      "partitionInfo": null,
+      "schemaInfos": [
+        {
+          "colName": "id1",
+          "column": {
+            "col_name": "id1",
+            "col_type": "string",
+            "col_comment": null
+          }
+        }
+      ],
+      "predictComponent": null,
+      "records": null,
+      "columnsName": null,
+      "columnsType": null,
+      "isSkip": null,
+      "model_config": null,
+      "model_submit_params": null
+    }
+  }
+}
